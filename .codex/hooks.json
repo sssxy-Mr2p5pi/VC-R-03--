@@ -1,0 +1,18 @@
+{
+  "description": "VC-R-03 常见递归删除和 Git 强推拦截；使用前本人审阅信任；词法检查覆盖有限。移动项目后须更新脚本绝对路径。",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\Users\\percy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 \"E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\guard_commands.py\"",
+            "timeout": 10,
+            "statusMessage": "检查递归删除、强制推送与安全集成探针"
+          }
+        ]
+      }
+    ]
+  }
+}

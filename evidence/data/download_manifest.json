@@ -1,0 +1,30 @@
+{
+  "dataset": "UCI Online Retail II",
+  "official_page": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+  "download_url": "https://archive.ics.uci.edu/static/public/502/online%2Bretail%2Bii.zip",
+  "final_download_url": "https://archive.ics.uci.edu/static/public/502/online%2Bretail%2Bii.zip",
+  "downloaded_at": "2026-10-13T12:32:53+08:00",
+  "citation": "Chen, D. (2012). Online Retail II [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5CG6D",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "official_expected_total_rows": 1067371,
+  "http_headers": {
+    "Content-Type": null,
+    "Last-Modified": null,
+    "ETag": null
+  },
+  "transformations": [],
+  "hash_note": "Locally calculated integrity hashes, not an independently published UCI checksum.",
+  "files": [
+    {
+      "path": "data/raw/online_retail_II_uci.zip",
+      "bytes": 45622418,
+      "sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb"
+    },
+    {
+      "path": "data/raw/online_retail_II.xlsx",
+      "bytes": 45622278,
+      "sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980"
+    }
+  ]
+}

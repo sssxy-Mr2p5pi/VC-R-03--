@@ -1,0 +1,199 @@
+{
+  "checked_at": "2026-10-13T13:02:19.760149+08:00",
+  "verification_type": "offline_script_protocol_and_windows_launcher",
+  "live_codex_hook_integration": "NOT_VERIFIED_REQUIRES_USER_TRUST_AND_REAL_TOOL_CALL",
+  "python_version": "3.12.10",
+  "guard_path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\guard_commands.py",
+  "total": 31,
+  "passed": 31,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "safe_git_status",
+      "expected": "no_objection",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "safe_output_mentions_command",
+      "expected": "no_objection",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "safe_output_mentions_force",
+      "expected": "no_objection",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ordinary_push",
+      "expected": "no_objection",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ordinary_file_delete",
+      "expected": "no_objection",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "explicit_nonrecursive_delete",
+      "expected": "no_objection",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_recursive_delete",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_recursive_whatif",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_recursive_mixedcase",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_recursive_abbreviation",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_pipeline_delete",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_second_statement",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_backtick_command",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_qualified_command",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_quoted_executable",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_comment",
+      "expected": "no_objection",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "ps_comment_next_line",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "git_force_long",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "git_force_short",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "git_force_cluster",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "git_force_lease",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "git_force_refspec",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "cmd_recursive",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "unix_recursive",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "safe_probe",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "invalid_json",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "invalid_object",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "wrong_event",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "missing_command",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "windows_cmd_quoted_unicode_path",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "windows_powershell_quoted_unicode_path",
+      "expected": "deny",
+      "passed": true,
+      "error": null
+    }
+  ],
+  "coverage_limit": "Literal command lexer only; no general alias, variable, encoding, external script or arbitrary program analysis."
+}

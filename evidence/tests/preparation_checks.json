@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-13T13:03:09+08:00",
+  "scope": "Preparation tooling only; isolated fixtures, no business acceptance or student manual replay.",
+  "original_source_unchanged": true,
+  "total": 5,
+  "passed": 5,
+  "cases": [
+    {
+      "name": "fresh_checkout_recovers_official_files_without_rewriting_first_manifest",
+      "passed": true
+    },
+    {
+      "name": "repeat_recovery_is_read_only_and_idempotent",
+      "passed": true
+    },
+    {
+      "name": "mismatched_integrity_record_refuses_to_overwrite_existing_source",
+      "passed": true
+    },
+    {
+      "name": "invalid_and_future_dates_do_not_count",
+      "passed": true
+    },
+    {
+      "name": "directory_with_image_extension_is_not_a_screenshot",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-13T13:02:17+08:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10",
+  "python_executable": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\.venv\\Scripts\\python.exe",
+  "virtual_environment": true,
+  "packages": {
+    "pandas": "3.0.6",
+    "openpyxl": "3.1.5",
+    "pytest": "9.1.1",
+    "ruff": "0.17.0"
+  },
+  "sqlite_version": "3.49.1",
+  "sqlite_smoke_check": true,
+  "tools": {
+    "git": {
+      "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "returncode": 0,
+      "version": "git version 2.55.0.windows.3",
+      "diagnostic": ""
+    },
+    "node": {
+      "path": "C:\\Program Files\\nodejs\\node.EXE",
+      "returncode": 0,
+      "version": "v24.21.0",
+      "diagnostic": ""
+    },
+    "npm": {
+      "path": "C:\\Program Files\\nodejs\\npm.cmd",
+      "returncode": 0,
+      "version": "11.19.0",
+      "diagnostic": ""
+    },
+    "codex": {
+      "path": "C:\\Users\\percy\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin\\codex.EXE",
+      "returncode": 0,
+      "version": "codex-cli 0.148.0",
+      "diagnostic": ""
+    }
+  },
+  "scope": "Development environment only. No application, business tests, or live Codex Hook integration verified."
+}

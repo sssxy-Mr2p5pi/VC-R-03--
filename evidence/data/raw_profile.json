@@ -1,0 +1,202 @@
+{
+  "profiled_at": "2026-10-13T12:35:05+08:00",
+  "source_path": "data/raw/online_retail_II.xlsx",
+  "source_sha256_before": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_sha256_after": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "header_policy": "Excel row 1 explicitly treated as the header; every remaining row inspected in every sheet.",
+  "total_data_rows": 1067371,
+  "official_expected_total_rows": 1067371,
+  "matches_official_total": true,
+  "sheets": [
+    {
+      "sheet": "Year 2009-2010",
+      "header_excel_row": 1,
+      "actual_headers": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "field_mapping": {
+        "invoice": "Invoice",
+        "stock_code": "StockCode",
+        "description": "Description",
+        "quantity": "Quantity",
+        "invoice_date": "InvoiceDate",
+        "unit_price": "Price",
+        "customer_id": "Customer ID",
+        "country": "Country"
+      },
+      "counts": {
+        "physical_rows_after_header": 525461,
+        "data_rows": 525461,
+        "non_c_prefix_rows": 515255,
+        "quantity_positive": 513135,
+        "price_positive": 521771,
+        "c_prefix_rows": 10206,
+        "quantity_negative": 12326,
+        "non_c_with_negative_quantity": 2121,
+        "price_zero": 3687,
+        "c_with_nonnegative_quantity": 1,
+        "price_negative": 3
+      },
+      "missing_by_field": {
+        "invoice": 0,
+        "stock_code": 0,
+        "description": 2928,
+        "quantity": 0,
+        "invoice_date": 0,
+        "unit_price": 0,
+        "customer_id": 107927,
+        "country": 0
+      },
+      "date_min": "2009-12-01T07:45:00",
+      "date_max": "2010-12-09T20:01:00",
+      "rows_by_month": {
+        "2009-12": 45228,
+        "2010-01": 31555,
+        "2010-02": 29388,
+        "2010-03": 41511,
+        "2010-04": 34057,
+        "2010-05": 35323,
+        "2010-06": 39983,
+        "2010-07": 33383,
+        "2010-08": 33306,
+        "2010-09": 42091,
+        "2010-10": 59098,
+        "2010-11": 78015,
+        "2010-12": 22523
+      },
+      "first_data_row": {
+        "sheet": "Year 2009-2010",
+        "excel_row": 2,
+        "values": [
+          489434,
+          85048,
+          "15CM CHRISTMAS GLASS BALL 20 LIGHTS",
+          12,
+          "2009-12-01T07:45:00",
+          6.95,
+          13085,
+          "United Kingdom"
+        ]
+      },
+      "last_data_row": {
+        "sheet": "Year 2009-2010",
+        "excel_row": 525462,
+        "values": [
+          538171,
+          21931,
+          "JUMBO STORAGE BAG SUKI",
+          2,
+          "2010-12-09T20:01:00",
+          1.95,
+          17530,
+          "United Kingdom"
+        ]
+      }
+    },
+    {
+      "sheet": "Year 2010-2011",
+      "header_excel_row": 1,
+      "actual_headers": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "field_mapping": {
+        "invoice": "Invoice",
+        "stock_code": "StockCode",
+        "description": "Description",
+        "quantity": "Quantity",
+        "invoice_date": "InvoiceDate",
+        "unit_price": "Price",
+        "customer_id": "Customer ID",
+        "country": "Country"
+      },
+      "counts": {
+        "physical_rows_after_header": 541910,
+        "data_rows": 541910,
+        "non_c_prefix_rows": 532622,
+        "quantity_positive": 531286,
+        "price_positive": 539393,
+        "c_prefix_rows": 9288,
+        "quantity_negative": 10624,
+        "price_zero": 2515,
+        "non_c_with_negative_quantity": 1336,
+        "price_negative": 2
+      },
+      "missing_by_field": {
+        "invoice": 0,
+        "stock_code": 0,
+        "description": 1454,
+        "quantity": 0,
+        "invoice_date": 0,
+        "unit_price": 0,
+        "customer_id": 135080,
+        "country": 0
+      },
+      "date_min": "2010-12-01T08:26:00",
+      "date_max": "2011-12-09T12:50:00",
+      "rows_by_month": {
+        "2010-12": 42481,
+        "2011-01": 35147,
+        "2011-02": 27707,
+        "2011-03": 36748,
+        "2011-04": 29916,
+        "2011-05": 37030,
+        "2011-06": 36874,
+        "2011-07": 39518,
+        "2011-08": 35284,
+        "2011-09": 50226,
+        "2011-10": 60742,
+        "2011-11": 84711,
+        "2011-12": 25526
+      },
+      "first_data_row": {
+        "sheet": "Year 2010-2011",
+        "excel_row": 2,
+        "values": [
+          536365,
+          "85123A",
+          "WHITE HANGING HEART T-LIGHT HOLDER",
+          6,
+          "2010-12-01T08:26:00",
+          2.55,
+          17850,
+          "United Kingdom"
+        ]
+      },
+      "last_data_row": {
+        "sheet": "Year 2010-2011",
+        "excel_row": 541911,
+        "values": [
+          581587,
+          "POST",
+          "POSTAGE",
+          1,
+          "2011-12-09T12:50:00",
+          18,
+          12680,
+          "France"
+        ]
+      }
+    }
+  ],
+  "duration_seconds": 28.28,
+  "scope": "Read-only preparation profile. No cleaning, slicing, reconciliation, assignments, or business acceptance performed.",
+  "not_measured": [
+    "duplicate row count",
+    "ground-truth return links",
+    "business end-to-end performance"
+  ]
+}

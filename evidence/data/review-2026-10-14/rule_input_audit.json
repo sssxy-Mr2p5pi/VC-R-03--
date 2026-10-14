@@ -1,0 +1,254 @@
+{
+  "measured_at": "2026-10-14T20:47:56.879421+08:00",
+  "scope": "Both worksheets; each first row is a header. This is a read-only input audit, not matching or business acceptance.",
+  "source": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\data\\raw\\online_retail_II.xlsx",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_unchanged": true,
+  "audit_script_sha256": "02b23322d27dac0067a458b319446acfc85cc370b67ee51cba36f4489b18f9e7",
+  "nonproduct_rule": {
+    "invoice_prefix": "A",
+    "exact_codes": [
+      "ADJUST",
+      "ADJUST2",
+      "AMAZONFEE",
+      "B",
+      "BANK CHARGES",
+      "C2",
+      "CRUK",
+      "D",
+      "DOT",
+      "M",
+      "PADS",
+      "POST",
+      "S"
+    ],
+    "fullmatch_patterns": [
+      "TEST\\d+",
+      "GIFT_\\d+_\\d+"
+    ],
+    "code_normalization_for_audit": "NFKC, strip ends, upper",
+    "status": "Project proposed list; recheck future course code table"
+  },
+  "worksheets": {
+    "Year 2009-2010": {
+      "header": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "counts_before_dedup": {
+        "rows": 525461,
+        "nonproduct": 2979,
+        "negative_regular": 2121,
+        "negative_regular_and_nonproduct": 0,
+        "nonproduct_regular": 2354,
+        "nonproduct_cancel": 625,
+        "regular_POST": 762,
+        "cancel_rows": 10206,
+        "commodity_cancel_rows": 9581,
+        "cancel_missing_customer_rows": 367,
+        "commodity_cancel_missing_customer_rows": 187,
+        "sku_strip_changes": 1,
+        "sku_case_changes": 1494,
+        "sku_nfkc_changes": 0,
+        "sku_missing": 0,
+        "sku_leading_zero": 0,
+        "commodity_price_zero": 3655,
+        "commodity_price_negative": 0,
+        "cancel_commodity_price_nonpositive": 0,
+        "cancel_commodity_quantity_nonnegative": 0
+      },
+      "invoice_counts_before_dedup": {
+        "cancel": 4592,
+        "commodity": 4105,
+        "with_customer": 4372,
+        "commodity_with_customer": 4020,
+        "nonproduct": 564,
+        "pure_nonproduct": 487,
+        "mixed": 77
+      },
+      "price_decimal_places_before_dedup": {
+        "2": 484204,
+        "1": 35723,
+        "0": 5520,
+        "3": 14
+      },
+      "examples": {
+        "sku_case_changes": {
+          "sheet": "Year 2009-2010",
+          "excel_row": 2535,
+          "raw": "72349b",
+          "normalized": "72349B"
+        },
+        "price_more_than_2_decimals": {
+          "sheet": "Year 2009-2010",
+          "excel_row": 62301,
+          "price": "0.001",
+          "stock_code": "PADS"
+        },
+        "sku_strip_changes": {
+          "sheet": "Year 2009-2010",
+          "excel_row": 260888,
+          "raw": "47503J ",
+          "normalized": "47503J"
+        }
+      }
+    },
+    "Year 2010-2011": {
+      "header": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "counts_before_dedup": {
+        "rows": 541910,
+        "nonproduct": 2951,
+        "negative_regular": 1336,
+        "negative_regular_and_nonproduct": 0,
+        "nonproduct_regular": 2367,
+        "nonproduct_cancel": 584,
+        "regular_POST": 1131,
+        "cancel_rows": 9288,
+        "commodity_cancel_rows": 8704,
+        "cancel_missing_customer_rows": 383,
+        "commodity_cancel_missing_customer_rows": 165,
+        "sku_strip_changes": 0,
+        "sku_case_changes": 1977,
+        "sku_nfkc_changes": 0,
+        "sku_missing": 0,
+        "sku_leading_zero": 0,
+        "commodity_price_zero": 2497,
+        "commodity_price_negative": 0,
+        "cancel_commodity_price_nonpositive": 0,
+        "cancel_commodity_quantity_nonnegative": 0
+      },
+      "invoice_counts_before_dedup": {
+        "cancel": 3836,
+        "nonproduct": 477,
+        "with_customer": 3654,
+        "commodity": 3422,
+        "commodity_with_customer": 3383,
+        "pure_nonproduct": 414,
+        "mixed": 63
+      },
+      "price_decimal_places_before_dedup": {
+        "2": 510632,
+        "1": 26770,
+        "0": 4504,
+        "3": 4
+      },
+      "examples": {
+        "sku_case_changes": {
+          "sheet": "Year 2010-2011",
+          "excel_row": 5372,
+          "raw": "15056bl",
+          "normalized": "15056BL"
+        },
+        "price_more_than_2_decimals": {
+          "sheet": "Year 2010-2011",
+          "excel_row": 157197,
+          "price": "0.001",
+          "stock_code": "PADS"
+        }
+      }
+    }
+  },
+  "cross_sheet_invoice_multisets": {
+    "fields": [
+      "StockCode",
+      "Description",
+      "Quantity",
+      "InvoiceDate",
+      "Price",
+      "Customer ID",
+      "Country"
+    ],
+    "shared_invoice_count": 1088,
+    "identical_invoice_count": 1088,
+    "different_invoice_count": 0,
+    "removed_first_sheet_rows": 22523,
+    "removed_and_negative_regular": 64,
+    "removed_and_nonproduct": 100
+  },
+  "r1_for_existing_two_exclusion_rules": {
+    "raw_rows": 1067371,
+    "cross_sheet_duplicate_rows": 22523,
+    "negative_regular_rows": 3457,
+    "overlap_rows": 64,
+    "excluded_union_rows": 25916,
+    "retained_rows": 1041455,
+    "note": "Preparation-rule count only; no processed data or database was produced."
+  },
+  "normalization": {
+    "normalized_groups_with_multiple_raw_spellings": 174,
+    "examples": {
+      "48173C": [
+        "48173C",
+        "48173c"
+      ],
+      "84596F": [
+        "84596F",
+        "84596f"
+      ],
+      "84596L": [
+        "84596L",
+        "84596l"
+      ],
+      "84970S": [
+        "84970S",
+        "84970s"
+      ],
+      "84031A": [
+        "84031A",
+        "84031a"
+      ],
+      "84031B": [
+        "84031B",
+        "84031b"
+      ],
+      "85132A": [
+        "85132A",
+        "85132a"
+      ],
+      "85132C": [
+        "85132C",
+        "85132c"
+      ],
+      "85014A": [
+        "85014A",
+        "85014a"
+      ],
+      "85014B": [
+        "85014B",
+        "85014b"
+      ],
+      "85232B": [
+        "85232B",
+        "85232b"
+      ],
+      "85123A": [
+        "85123A",
+        "85123a"
+      ]
+    },
+    "note": "Spelling collisions alone do not establish business alias equivalence. No zero padding or customer merging performed."
+  },
+  "elapsed_seconds": 30.288,
+  "not_tested": [
+    "matching rate",
+    "price tolerance validity",
+    "workflows",
+    "concurrency",
+    "10000-row end-to-end performance"
+  ]
+}

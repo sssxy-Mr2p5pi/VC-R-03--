@@ -1,0 +1,81 @@
+{
+  "measured_at": "2026-10-14T21:28:06.050455+08:00",
+  "scope": "Both worksheets, every data cell in Quantity, InvoiceDate, Price and Customer ID; raw XLSX XML, not business acceptance",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "sheets": {
+    "sheet1": {
+      "counts": {
+        "data_rows": 525461,
+        "D:type:n": 525461,
+        "D:formula": 0,
+        "D:nonfinite": 0,
+        "D:noninteger": 0,
+        "E:type:n": 525461,
+        "E:formula": 0,
+        "E:nonfinite": 0,
+        "F:type:n": 525461,
+        "F:formula": 0,
+        "F:nonfinite": 0,
+        "Price:decimal_str_openpyxl_vs_xml_unequal": 61709,
+        "G:type:n": 417534,
+        "G:formula": 0,
+        "G:nonfinite": 0,
+        "G:noninteger": 0,
+        "G:absent": 107927
+      },
+      "examples": {
+        "Price:unequal": {
+          "cell": "F10",
+          "xml": "2.5499999999999998",
+          "cast_str": "2.55"
+        }
+      },
+      "distinct_price_lexemes": 1606,
+      "max_price_significant_digits": 17
+    },
+    "sheet2": {
+      "counts": {
+        "data_rows": 541910,
+        "D:type:n": 541910,
+        "D:formula": 0,
+        "D:nonfinite": 0,
+        "D:noninteger": 0,
+        "E:type:n": 541910,
+        "E:formula": 0,
+        "E:nonfinite": 0,
+        "F:type:n": 541910,
+        "F:formula": 0,
+        "F:nonfinite": 0,
+        "Price:decimal_str_openpyxl_vs_xml_unequal": 51170,
+        "G:type:n": 406830,
+        "G:formula": 0,
+        "G:nonfinite": 0,
+        "G:noninteger": 0,
+        "G:absent": 135080
+      },
+      "examples": {
+        "Price:unequal": {
+          "cell": "F2",
+          "xml": "2.5499999999999998",
+          "cast_str": "2.55"
+        }
+      },
+      "distinct_price_lexemes": 1630,
+      "max_price_significant_digits": 17
+    }
+  },
+  "workbook_properties": [
+    {
+      "defaultThemeVersion": "166925"
+    }
+  ],
+  "source_unchanged": true,
+  "different_xml_numeric_values_with_same_read_value": {},
+  "unique_candidate_price_comparison": {
+    "pairs": 9064,
+    "changed_equal_unequal_decisions": 0,
+    "raw_xml_equal": 8699,
+    "raw_xml_unequal": 365
+  },
+  "inspection_script_sha256": "919ea79580328738ec931bbf4f00a07511070d0c6501324615ad625c5670da2d"
+}

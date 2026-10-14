@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-14T23:10:44+08:00",
+  "scope": "user-approved line-ending-only correction",
+  "baseline_before": "2026-10-14.2",
+  "baseline_after": "2026-10-14.3",
+  "decisions_unchanged": "D-18..D-32",
+  "format_changes": [
+    {
+      "file": "要做什么.md",
+      "before_sha256": "23b1d2176e5ac9066b1664dcc94f578cd56ac5abae974da665d09c221f2f416c",
+      "after_sha256": "212de65fdd138f9c42000be005b42554c0e67d0ece8c979d08bd44f6dbfa99a2",
+      "text_lines_identical": true
+    },
+    {
+      "file": "怎么做.md",
+      "before_sha256": "1c99c5fdc23e912bbe1566934fd051a7fa9b519220010d7d9b4ba90709677f7c",
+      "after_sha256": "03a1e24774cd5c20614f8ef7dc19a669e7e548b0433b433b6d12a754e613a7f5",
+      "text_lines_identical": true
+    },
+    {
+      "file": "怎么算做对.md",
+      "before_sha256": "ade007805243d149aeccd29b3a119ad5041bbddd044d2e65a4e366ac17f476d8",
+      "after_sha256": "79239f9a4f9ef4075d9209a1a5c893b2fa729ba8a5eb02669ef67f2726c0fe2a",
+      "text_lines_identical": true
+    },
+    {
+      "file": "待确认事项.md",
+      "before_sha256": "4b716ea4ab662afd211a9b5aa671e86a13b78f63f58dd6d028766ccab0aacb82",
+      "after_sha256": "7644ac15909a7e17d0c32aae7765ca5adaf0900119577d82e2208c47a1126f84",
+      "text_lines_identical": true
+    },
+    {
+      "file": "选题自查表.md",
+      "before_sha256": "c786ac8dd9c5e6afd8667f3d1436ed032f617cce9a342a27656c0a8a9be3a734",
+      "after_sha256": "0966251d37b62697801df1963fa902dba3dc3e6834b7e6ff01e8aa9dd54866cf",
+      "text_lines_identical": true
+    }
+  ],
+  "update_output": "基线已更新为 2026-10-14.3；本次变更文件：要做什么.md、怎么做.md、怎么算做对.md、待确认事项.md、选题自查表.md\n别忘了同步《AGENTS.md》《CLAUDE.md》以及项目外的报告素材。\n",
+  "check_output": "基线版本：2026-10-14.3    更新于：2026-10-14T23:10:44+08:00\n现行决定：D-18..D-32\n\n[1] 规格文件校验\n  [规格] 要做什么.md        一致\n  [规格] 怎么做.md         一致\n  [规格] 怎么算做对.md       一致\n  [规格] 决定记录.md        一致\n  [规格] 待确认事项.md       一致\n  [规格] 选题自查表.md       一致\n  [入口] AGENTS.md      一致\n  [入口] CLAUDE.md      一致\n\n[2] 验收编号引用校验\n  FR／DP 编号均有验收文字引用；语义与执行结果需另查\n\n结果：基线文件一致，验收编号引用完整（不代表语义覆盖或测试通过）。\n"
+}

@@ -1,17 +1,27 @@
-# 数据说明与当前状态
+# 数据来源、处理范围与证据
 
-来源：UCI Online Retail II，Chen, D. (2012)，DOI https://doi.org/10.24432/C5CG6D，CC BY 4.0。
-官方页：https://archive.ics.uci.edu/dataset/502/online+retail+ii 。
+来源：Chen, D. (2012), UCI Online Retail II，DOI https://doi.org/10.24432/C5CG6D，CC BY 4.0。官方页：https://archive.ics.uci.edu/dataset/502/online+retail+ii 。
+原始ZIP/XLSX位于raw，不改写、不进入Git；首次取得信息与哈希见 `../evidence/data/download_manifest.json`。缺失时按已有下载脚本恢复并校验，恢复时间不能冒充首次下载时间。
 
-原始文件位于 raw/，不改写且不进入Git。来源、首次下载时间、字节数、校验值记录在 `../evidence/data/download_manifest.json`。
-完整只读统计在 `../evidence/data/raw_profile.json`；各表前五行带工作表/Excel行号的真实预览在 raw_preview.csv。
+2026-10-14确认主业务读取两表全量，性能样本单独准备。原始两表525,461及541,910行，共1,067,371行。表头Invoice、StockCode、Description、Quantity、InvoiceDate、Price、Customer ID、Country；Price为英镑单位价格，未提供税基与独立币种列。
 
-2026-10-13实测：Year 2009-2010有525,461行；Year 2010-2011有541,910行；合计1,067,371行。
-实际表头为 Invoice、StockCode、Description、Quantity、InvoiceDate、Price、Customer ID、Country。
-课程所列InvoiceNo、UnitPrice、CustomerID需要按实际文件映射。原始文件首行是表头，不算数据行。
+证据分层：
 
-两表日期范围在2010年12月有交集；此事实只表示时间范围重叠，不证明具体行重复。当前尚未实施去重、清洗、切片、配对或构造第二套账。
-processed/暂空；两边数据、样本和处理口径确认后再生成派生文件。
+- `raw_profile.json`：首次全量结构与异常核验。
+- `reconciliation_profile.json`：2026-10-13探索记录，保留历史；部分分类规则与范围陈述已失效，尤其M-05/M-08，不作现行汇总依据。
+- `review-2026-10-14/rule_input_audit.json`：当前七字段整单重复核验、行数并集、编码/精度事实。
+- `review-2026-10-14/batch_validation.json`、`batch_line_results.csv`：确认规则的全量只读设计验证；不创建正式配对台账或工单。
 
-原始文件丢失或新克隆后，运行 `scripts/download_data.py` 可按记录恢复：缺失文件从官方重新获取或从已核实ZIP提取，校验通过后补齐；已有但校验不符的文件拒绝覆盖。
-首次来源清单保留，恢复另写 source_recovery_history.json。不要把恢复时间当作首次取得时间。
+现行源哈希：`bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980`。
+跨表1,088张单七字段多重集合相同；保留后表，去掉前表22,523行。同号不同内容实测0例。再排除非C负数量3,393行（原始3,457与前项重叠64），得到保留1,041,455行。此为规则计算，processed与业务数据库仍待实现。
+
+全量干跑：17,973条商品取消行＝8,495自动配对＋7,614疑似＋1,864无原单；8,292张取消单＝2,935全自动＋3,564疑似＋906无原单＋887纯非商品。预计异常工单4,470张，当前未创建。
+全部结果均为项目规则下的候选关系，不能证明真实退货归属。非商品清单等待课程正式更新；价格容差首版为0，不以无标签的价差分布推断合法促销。
+
+来源位置键只能保证同文件重导幂等。换文件、重排或改变行位置可能重复入库；当前不自动跨版本合并，也不自动把行差集当源数据删除。新的来源先暂停并人工核对。
+
+## 输入表示补充核验（2026-10-14）
+
+`../evidence/reviews/2026-10-14-S1-S11/`保存本轮数值XML/读取值与规范化碰撞的只读证据。两表Quantity、Price、InvoiceDate均为数值单元格且无公式；客户号均为整数数值或缺失。112,879个Price在XML十进制文本与读取后Decimal(str(value))之间数值表示不同；9,064对唯一候选的相等/不等判定差异0。继续采用后者，不再笼统称“XML原精度”。174个商品码多原值组均由已批准形式等同解释，可疑组0，客户号和单号多原值组0。
+
+原始文件哈希未变。新合同的异常输入、公式拦截、碰撞暂停、质量清单及版本隔离仍是待实现规格；本轮不改旧分析脚本，不把原跑批结果改写成已执行这些新规则。

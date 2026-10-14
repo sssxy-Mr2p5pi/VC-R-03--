@@ -1,0 +1,34 @@
+{
+  "measured_at": "2026-10-14T21:28:30.389075+08:00",
+  "scope": "Both complete raw worksheets before deduplication; counts are distinct normalized keys, not matched rows",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_rows": 1067371,
+  "unicode_version": "15.0.0",
+  "forbidden_codepoint_hits": {
+    "Invoice": 0,
+    "StockCode": 0,
+    "Customer ID": 0
+  },
+  "fields": {
+    "Invoice": {
+      "merged_keys": 0,
+      "explained_by_ascii_case_width_boundary_whitespace": 0,
+      "other_compatibility_collisions": 0,
+      "other_examples": {}
+    },
+    "StockCode": {
+      "merged_keys": 174,
+      "explained_by_ascii_case_width_boundary_whitespace": 174,
+      "other_compatibility_collisions": 0,
+      "other_examples": {}
+    },
+    "Customer ID": {
+      "merged_keys": 0,
+      "explained_by_ascii_case_width_boundary_whitespace": 0,
+      "other_compatibility_collisions": 0,
+      "other_examples": {}
+    }
+  },
+  "source_unchanged": true,
+  "inspection_script_sha256": "629be39927c8df06b304ec1537adfd321a5619d0fb4a410a734409b1e3b3a663"
+}

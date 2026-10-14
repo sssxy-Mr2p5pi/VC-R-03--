@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-14T21:30:56.980720+08:00",
+  "fr_count": 19,
+  "dp_count": 16,
+  "tc_design_count": 35,
+  "identifiers_preserved": true,
+  "evidence_script_hashes_match": true,
+  "business_tests_executed": 0,
+  "protected_before": {
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\audit_rule_inputs.py": "02b23322d27dac0067a458b319446acfc85cc370b67ee51cba36f4489b18f9e7",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\batch_validate_rules.py": "c92eb93a2915c2d8c025da29afaa57b39a09041b4b74a5f365bcf141932d4cb0",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\check_environment.py": "f8a4345417b69988ef5865fcb31102718e48af3a13884eb9604ecb8c50006f7c",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\check_guard.py": "6277c262bc96b432932de96c541eab865ffdeb561a32ff90b6874a27ce3222d7",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\check_submission.py": "3406d338dd31bafaa102f09fd51a5c620b7019dcf7706a8d6db897158b04d231",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\download_data.py": "73af7048233d5e6301375a69c158ee387d3fc2664980dea050d94da0b9e1d10a",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\guard_commands.py": "95532d50bb01319f8e621bbe449a301cdf2b85a93ed8c43b6349f58858d648a2",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\profile_data.py": "9bf4b648e6be50172ef398b595fb012aec69a4addd5bfeb6322ce7ae3b6121e9",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\save_daily_log.py": "202f5193670994daf507528c08eb290070e838ade3960badfe8b9b54446b9b25",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\setup.ps1": "350e22c7860732ff70a8add9eea7799c02957e4bcf6879bb3a086d3bb1b1ce8e",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\verify_preparation.py": "f7585abe0f9caa007eca034c9dca5e81996fde05da971429d3183afb1f7459be",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\src\\.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\tests\\.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\batch_line_results.csv": "db61f6b6b28567b38dba28ef800d65ca28cdbba8425e13bbf5bc3fd9f68a6569",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\batch_validation.json": "2181189a19410a824a257e2c1ebd354c5b79ec76933ade19c7fa679e0db70316",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\document_checks.json": "b8ad835d4d85a56d4546f0475b3e19ca3dd30168289a4d7004382d66b6ac5304",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\README.md": "ef023892dc873408cae4dd56c2cd41f63c07575fc2cb2cba171375b129cf35bc",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\rule_input_audit.json": "66176b71c48e43ad0109d94948659d6ffa3a8052f9569cd037ce501c376c5491",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\verification.json": "c93f05a3f5fddcde1979ead224ec0943b48580c95171a221165855de21e97671",
+    "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\data\\raw\\online_retail_II.xlsx": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980"
+  }
+}

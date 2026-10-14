@@ -1,0 +1,20 @@
+{
+  "scope": "staged Git recovery verification, not business tests",
+  "baseline_version": "2026-10-14.3",
+  "recovery_check_exit": 0,
+  "recovery_output": "基线版本：2026-10-14.3    更新于：2026-10-14T23:10:44+08:00\r\n现行决定：D-18..D-32\r\n\r\n[1] 规格文件校验\r\n  [规格] 要做什么.md        一致\r\n  [规格] 怎么做.md         一致\r\n  [规格] 怎么算做对.md       一致\r\n  [规格] 决定记录.md        一致\r\n  [规格] 待确认事项.md       一致\r\n  [规格] 选题自查表.md       一致\r\n  [入口] AGENTS.md      一致\r\n  [入口] CLAUDE.md      一致\r\n\r\n[2] 验收编号引用校验\r\n  FR／DP 编号均有验收文字引用；语义与执行结果需另查\r\n\r\n结果：基线文件一致，验收编号引用完整（不代表语义覆盖或测试通过）。\r\n",
+  "ruff_exit": 0,
+  "ruff_output": "All checks passed!\n",
+  "format_only": true,
+  "business_tests_executed": 0,
+  "daily_dates_included": [
+    "2026-10-13",
+    "2026-10-14"
+  ],
+  "excluded_by_project_policy": [
+    "external learning guides",
+    "raw data",
+    "virtual environment",
+    "exported commit logs"
+  ]
+}

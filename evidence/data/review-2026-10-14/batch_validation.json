@@ -1,0 +1,330 @@
+{
+  "measured_at": "2026-10-14T20:48:00.639044+08:00",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_unchanged": true,
+  "scope": "Both sheets, identical invoice multisets deduplicated retaining second sheet, non-C negative quantities excluded. Full historical candidate pool, empty effective ledger; design dry-run only.",
+  "rule": {
+    "normalization": "NFKC + strip ends + uppercase; preserve original; no aliases or zero padding",
+    "candidate": "same customer + stock, positive original quantity, original time <= cancellation time",
+    "price": "Decimal source unit price, GBP, tolerance zero; no tax assumption",
+    "quota": "Sum ALL uniquely referenced candidate quantities including price-mismatch rows; mark all references on over-quota; no temporal priority",
+    "multiple_candidates": "No allocation",
+    "combination": "Hint only; no allocation",
+    "nonproduct_dictionary": "Same exact code list as audit_rule_inputs.py; course update pending"
+  },
+  "row_counts": {
+    "raw": 1067371,
+    "imported": 1041455,
+    "excluded": {
+      "NON_C_NEGATIVE_QUANTITY": 3393,
+      "CROSS_SHEET_DUPLICATE": 22523
+    },
+    "nonproduct_retained_both_sides": 5830,
+    "commodity_cancellation": 17973,
+    "commodity_classes": {
+      "NO_ORIGINAL": 1864,
+      "MATCHED_AUTO": 8495,
+      "SUSPECTED": 7614
+    },
+    "primary_reasons_exclusive": {
+      "ONLY_LATER_SALES": 496,
+      "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 1036,
+      "MATCHED_AUTO": 8495,
+      "MULTIPLE_CANDIDATES": 7045,
+      "MISSING_CUSTOMER": 332,
+      "CUMULATIVE_OVER_QUOTA": 144,
+      "PRICE_DIFFERENCE": 365,
+      "SINGLE_RETURN_EXCEEDS_ORIGINAL": 60
+    },
+    "reason_tags_nonexclusive": {
+      "ONLY_LATER_SALES": 496,
+      "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 1036,
+      "MULTIPLE_CANDIDATES": 7045,
+      "MISSING_CUSTOMER": 332,
+      "COMBINATION_POSSIBLE_NOT_PROVEN": 114,
+      "CUMULATIVE_OVER_QUOTA": 227,
+      "PRICE_DIFFERENCE": 365,
+      "SINGLE_RETURN_EXCEEDS_ORIGINAL": 71
+    }
+  },
+  "invoice_counts": {
+    "NONPRODUCT_ONLY": 887,
+    "NO_ORIGINAL": 906,
+    "MATCHED_AUTO": 2935,
+    "SUSPECTED": 3564
+  },
+  "work_order_scope": {
+    "predicted_work_orders": 4470,
+    "all_commodity_lines_in_predicted_work_orders": 12909,
+    "nonproduct_source_rows_in_work_order_footers": 110,
+    "pure_nonproduct_source_rows": 1037,
+    "automatic_invoice_product_rows": 5064,
+    "automatic_invoice_nonproduct_rows": 45,
+    "all_cancellation_nonproduct_rows": 1192,
+    "note": "Predictions only; no tickets created. Commodity lines of fully automatic invoices remain in results, not work-order details."
+  },
+  "quota": {
+    "conflicted_original_rows": 140,
+    "conflicted_cancellation_rows": 227,
+    "combination_hint_rows": 114,
+    "conflict_examples": [
+      {
+        "sheet": "Year 2009-2010",
+        "excel_row": 6404,
+        "original_quantity": 6,
+        "total_unique_candidate_demand": 12,
+        "cancellation_rows": 2
+      },
+      {
+        "sheet": "Year 2009-2010",
+        "excel_row": 11910,
+        "original_quantity": 3,
+        "total_unique_candidate_demand": 4,
+        "cancellation_rows": 2
+      },
+      {
+        "sheet": "Year 2009-2010",
+        "excel_row": 21769,
+        "original_quantity": 4,
+        "total_unique_candidate_demand": 23,
+        "cancellation_rows": 1
+      },
+      {
+        "sheet": "Year 2009-2010",
+        "excel_row": 36059,
+        "original_quantity": 6,
+        "total_unique_candidate_demand": 7,
+        "cancellation_rows": 3
+      },
+      {
+        "sheet": "Year 2009-2010",
+        "excel_row": 40353,
+        "original_quantity": 1,
+        "total_unique_candidate_demand": 2,
+        "cancellation_rows": 1
+      }
+    ],
+    "alternative_price_valid_demand_only": {
+      "conflicted_cancellation_rows": 194,
+      "different_rows": 33,
+      "note": "Sensitivity comparison only; this alternate rule is not adopted."
+    }
+  },
+  "price_differences_unique_candidates": {
+    "unique_rows": 9064,
+    "exactly_equal": 8699,
+    "nonzero_abs_at_most_0_01": 0,
+    "greater_than_0_01": 365,
+    "note": "No ground truth correspondence; price distribution cannot establish a legitimate tolerance."
+  },
+  "checks": {
+    "source_hash_unchanged": true,
+    "row_balance": true,
+    "classification_balance": true,
+    "invoice_balance": true,
+    "linear_candidate_crosschecks": 32,
+    "proposed_automatic_allocations_within_original_quantity": true
+  },
+  "examples": {
+    "ONLY_LATER_SALES": {
+      "invoice": "C489449",
+      "sheet": "Year 2009-2010",
+      "excel_row": 180,
+      "raw_stock_code": "22087",
+      "normalized_stock_code": "22087",
+      "raw_customer": 16321,
+      "normalized_customer": "16321",
+      "candidate_count": 0,
+      "reasons": [
+        "ONLY_LATER_SALES"
+      ],
+      "original": null,
+      "price_delta": null,
+      "requested_quantity": 12,
+      "classification": "NO_ORIGINAL",
+      "primary_reason": "ONLY_LATER_SALES"
+    },
+    "NO_SAME_CUSTOMER_STOCK_IN_DATASET": {
+      "invoice": "C489476",
+      "sheet": "Year 2009-2010",
+      "excel_row": 287,
+      "raw_stock_code": "22149",
+      "normalized_stock_code": "22149",
+      "raw_customer": 13293,
+      "normalized_customer": "13293",
+      "candidate_count": 0,
+      "reasons": [
+        "NO_SAME_CUSTOMER_STOCK_IN_DATASET"
+      ],
+      "original": null,
+      "price_delta": null,
+      "requested_quantity": 6,
+      "classification": "NO_ORIGINAL",
+      "primary_reason": "NO_SAME_CUSTOMER_STOCK_IN_DATASET"
+    },
+    "MATCHED_AUTO": {
+      "invoice": "C489554",
+      "sheet": "Year 2009-2010",
+      "excel_row": 1164,
+      "raw_stock_code": "85042",
+      "normalized_stock_code": "85042",
+      "raw_customer": 13767,
+      "normalized_customer": "13767",
+      "candidate_count": 1,
+      "reasons": [],
+      "original": {
+        "invoice": "489465",
+        "sheet": "Year 2009-2010",
+        "excel_row": 282,
+        "quantity": 24,
+        "price": "4.25"
+      },
+      "price_delta": "0.00",
+      "requested_quantity": 3,
+      "classification": "MATCHED_AUTO",
+      "primary_reason": "MATCHED_AUTO"
+    },
+    "MULTIPLE_CANDIDATES": {
+      "invoice": "C489563",
+      "sheet": "Year 2009-2010",
+      "excel_row": 1356,
+      "raw_stock_code": "90090",
+      "normalized_stock_code": "90090",
+      "raw_customer": 13526,
+      "normalized_customer": "13526",
+      "candidate_count": 2,
+      "reasons": [
+        "MULTIPLE_CANDIDATES"
+      ],
+      "original": null,
+      "price_delta": null,
+      "requested_quantity": 24,
+      "classification": "SUSPECTED",
+      "primary_reason": "MULTIPLE_CANDIDATES"
+    },
+    "MISSING_CUSTOMER": {
+      "invoice": "C489860",
+      "sheet": "Year 2009-2010",
+      "excel_row": 5900,
+      "raw_stock_code": "90029",
+      "normalized_stock_code": "90029",
+      "raw_customer": null,
+      "normalized_customer": "",
+      "candidate_count": 0,
+      "reasons": [
+        "MISSING_CUSTOMER"
+      ],
+      "original": null,
+      "price_delta": null,
+      "requested_quantity": 1,
+      "classification": "NO_ORIGINAL",
+      "primary_reason": "MISSING_CUSTOMER"
+    },
+    "COMBINATION_POSSIBLE_NOT_PROVEN": {
+      "invoice": "C490133",
+      "sheet": "Year 2009-2010",
+      "excel_row": 9326,
+      "raw_stock_code": "21314",
+      "normalized_stock_code": "21314",
+      "raw_customer": 17949,
+      "normalized_customer": "17949",
+      "candidate_count": 2,
+      "reasons": [
+        "MULTIPLE_CANDIDATES",
+        "COMBINATION_POSSIBLE_NOT_PROVEN"
+      ],
+      "original": null,
+      "price_delta": null,
+      "requested_quantity": 504,
+      "classification": "SUSPECTED",
+      "primary_reason": "MULTIPLE_CANDIDATES"
+    },
+    "CUMULATIVE_OVER_QUOTA": {
+      "invoice": "C491166",
+      "sheet": "Year 2009-2010",
+      "excel_row": 22855,
+      "raw_stock_code": "22325",
+      "normalized_stock_code": "22325",
+      "raw_customer": 12437,
+      "normalized_customer": "12437",
+      "candidate_count": 1,
+      "reasons": [
+        "CUMULATIVE_OVER_QUOTA"
+      ],
+      "original": {
+        "invoice": "489883",
+        "sheet": "Year 2009-2010",
+        "excel_row": 6404,
+        "quantity": 6,
+        "price": "4.95"
+      },
+      "price_delta": "0.00",
+      "requested_quantity": 6,
+      "classification": "SUSPECTED",
+      "primary_reason": "CUMULATIVE_OVER_QUOTA"
+    },
+    "PRICE_DIFFERENCE": {
+      "invoice": "C491208",
+      "sheet": "Year 2009-2010",
+      "excel_row": 23559,
+      "raw_stock_code": "85033G",
+      "normalized_stock_code": "85033G",
+      "raw_customer": 14564,
+      "normalized_customer": "14564",
+      "candidate_count": 1,
+      "reasons": [
+        "PRICE_DIFFERENCE"
+      ],
+      "original": {
+        "invoice": "490145",
+        "sheet": "Year 2009-2010",
+        "excel_row": 9667,
+        "quantity": 12,
+        "price": "1.95"
+      },
+      "price_delta": "-1.30",
+      "requested_quantity": 2,
+      "classification": "SUSPECTED",
+      "primary_reason": "PRICE_DIFFERENCE"
+    },
+    "SINGLE_RETURN_EXCEEDS_ORIGINAL": {
+      "invoice": "C492911",
+      "sheet": "Year 2009-2010",
+      "excel_row": 42146,
+      "raw_stock_code": "79321",
+      "normalized_stock_code": "79321",
+      "raw_customer": 14505,
+      "normalized_customer": "14505",
+      "candidate_count": 1,
+      "reasons": [
+        "PRICE_DIFFERENCE",
+        "SINGLE_RETURN_EXCEEDS_ORIGINAL",
+        "CUMULATIVE_OVER_QUOTA"
+      ],
+      "original": {
+        "invoice": "491113",
+        "sheet": "Year 2009-2010",
+        "excel_row": 21769,
+        "quantity": 4,
+        "price": "4.95"
+      },
+      "price_delta": "-0.70",
+      "requested_quantity": 23,
+      "classification": "SUSPECTED",
+      "primary_reason": "PRICE_DIFFERENCE"
+    }
+  },
+  "artifacts": {
+    "line_results": "batch_line_results.csv",
+    "line_results_sha256": "db61f6b6b28567b38dba28ef800d65ca28cdbba8425e13bbf5bc3fd9f68a6569",
+    "audit_script_sha256": "c92eb93a2915c2d8c025da29afaa57b39a09041b4b74a5f365bcf141932d4cb0",
+    "classifier_script_sha256": "02b23322d27dac0067a458b319446acfc85cc370b67ee51cba36f4489b18f9e7"
+  },
+  "elapsed_seconds": 34.013,
+  "limitations": [
+    "No workflow/ledger transactions were executed",
+    "No application UI or 10000-row performance acceptance was tested",
+    "No matching correctness ground truth exists",
+    "Nonproduct dictionary remains subject to the future course update"
+  ]
+}

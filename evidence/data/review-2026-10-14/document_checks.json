@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-14T20:49:01.979094+08:00",
+  "scope": "Document identifiers, requirement-to-case coverage, guide local links, evidence hashes and CSV summary; not application acceptance",
+  "requirements": 19,
+  "acceptance_designs": 35,
+  "data_rules": 16,
+  "requirements_without_cases": [],
+  "guide_broken_local_links": [],
+  "unique_csv_source_rows": 17973,
+  "csv_classification_counts": {
+    "NO_ORIGINAL": 1864,
+    "MATCHED_AUTO": 8495,
+    "SUSPECTED": 7614
+  },
+  "evidence_hashes_match_final_scripts": true,
+  "business_automated_tests_executed": 0
+}

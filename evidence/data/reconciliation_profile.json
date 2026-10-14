@@ -1,0 +1,154 @@
+{
+  "measured_at": "2026-10-13T23:20:00+08:00",
+  "measured_by": "AI 辅助执行只读实测，结果由本人核对",
+  "source_path": "data/raw/online_retail_II.xlsx",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "method": "按工作表读取工作簿；全部分组、合并与计数在内存内完成；未写盘，未修改原始文件。源文件哈希与 raw_profile.json 记录一致。",
+  "scope_note": "本文件是【规则设计依据】，不是最终业务统计。多项统计只覆盖工作表 Year 2010-2011（见各条 scope）；切片范围与两边口径确认后必须重跑，届时另行记录。",
+  "purpose": "为 VC-R-03 的两侧分类、整单去重、配对规则与差异类型提供可核对的实测依据。",
+  "measurements": [
+    {
+      "id": "M-01",
+      "name": "单号前缀分布",
+      "scope": "两个工作表全量",
+      "rule": "对 Invoice 取字母前缀（无前缀／C／A）后按工作表计数",
+      "result": {
+        "Year 2009-2010": {"no_prefix": 515252, "C": 10206, "A": 3, "total": 525461},
+        "Year 2010-2011": {"no_prefix": 532619, "C": 9288, "A": 3, "total": 541910}
+      },
+      "note": "无前缀 515252 + A 3 = 515255，与 raw_profile.json 的 non_c_prefix_rows 一致。"
+    },
+    {
+      "id": "M-02",
+      "name": "取消单是否存在原单外键",
+      "scope": "Year 2010-2011",
+      "rule": "取唯一取消单号，剥去首字母 C，检查该数字是否等于任一正向单号",
+      "result": {"unique_cancellation_invoices": 3836, "bare_number_matches_normal_invoice": 0},
+      "note": "证实课程证据锚点所述：取消单是独立新单号，不指向原订单号。"
+    },
+    {
+      "id": "M-03",
+      "name": "跨工作表完全重复单",
+      "scope": "两个工作表",
+      "rule": "取两表单号交集，再按 StockCode／Quantity／Price／InvoiceDate／Customer ID／Description 六列比对内容",
+      "result": {
+        "invoices_in_both_sheets": 1088,
+        "identical_content": 1088,
+        "different_content": 0,
+        "rows_per_side": 22523,
+        "rows_total": 45046,
+        "date_range": "2010-12-01T08:26:00 ~ 2010-12-09T20:01:00"
+      },
+      "note": "此前只知两表时间范围重叠，本次证实内容确实重复。工作簿中物理位置靠后的一份在工作表 Year 2010-2011。"
+    },
+    {
+      "id": "M-04",
+      "name": "无 C 前缀的负数量凭证",
+      "scope": "两个工作表",
+      "rule": "Invoice 不以 C 开头且 Quantity < 0",
+      "result": {
+        "Year 2009-2010": {"rows": 2121, "unique_invoices": 2121, "single_line_invoices": 2121, "with_customer_id": 0, "price_zero": 2121, "description_null": 1827},
+        "Year 2010-2011": {"rows": 1336, "unique_invoices": 1336, "single_line_invoices": 1336, "with_customer_id": 0, "price_zero": 1336, "description_null": 862},
+        "rows_total": 3457
+      },
+      "note": "全部单行独占一个单号、无客户号、单价为 0，判为库存调整类凭证而非客户退货；合计 3457 行与课程《数据说明》所述一致。"
+    },
+    {
+      "id": "M-05",
+      "name": "非商品编码行",
+      "scope": "两个工作表",
+      "rule": "StockCode 匹配非商品编码清单（POST／DOT／M／D／C2／S／B／PADS／ADJUST／TEST*／BANK CHARGES／AMAZONFEE／CRUK／gift_*）；DCGS* 语义待定，未计入",
+      "result": {
+        "Year 2010-2011": {"rows": 2996, "distinct_codes": 33, "top": {"POST": 1257, "DOT": 710, "M": 571, "C2": 144, "D": 77, "S": 63, "BANK CHARGES": 37, "AMAZONFEE": 34, "CRUK": 16, "DCGSSGIRL": 13, "DCGSSBOY": 11, "gift_0001_20": 10}},
+        "Year 2009-2010": {"rows": 3097, "distinct_codes": 54}
+      },
+      "note": "Descriptions 实测：POST=POSTAGE、DOT=DOTCOM POSTAGE、M=Manual、C2=CARRIAGE、D=Discount、S=SAMPLES、BANK CHARGES=Bank Charges、AMAZONFEE=AMAZON FEE、CRUK=CRUK Commission、gift_*=Gift Voucher。"
+    },
+    {
+      "id": "M-06",
+      "name": "非商品编码行在取消单内的分布",
+      "scope": "两个工作表",
+      "rule": "按取消单分组统计是否含非商品行、是否整单只由非商品行构成",
+      "result": {
+        "Year 2010-2011": {"cancellation_invoices_total": 3836, "nonproduct_rows_inside_C": 584, "invoices_containing_nonproduct": 477, "invoices_only_nonproduct": 414, "invoices_mixed": 63, "invoices_without_nonproduct": 3359},
+        "Year 2009-2010": {"nonproduct_rows_inside_C": 625, "invoices_containing_nonproduct": 564, "invoices_only_nonproduct": 487}
+      },
+      "note": "Year 2010-2011 的 414 张占取消单总数 10.8%；这批取消单若排除非商品行将整单为空，是双轴分类与非商品口径的关键输入。"
+    },
+    {
+      "id": "M-07",
+      "name": "取消单内的正数量行",
+      "scope": "两个工作表",
+      "rule": "Invoice 以 C 开头且 Quantity >= 0",
+      "result": {
+        "Year 2009-2010": [{"Invoice": "C496350", "StockCode": "M", "Description": "Manual", "Quantity": 1, "Price": 373.57, "Customer ID": null}],
+        "Year 2010-2011": []
+      },
+      "note": "证实『按单号前缀』与『按数量符号』分类结果不同；该行同时是非商品编码行，一行命中两条待定规则。"
+    },
+    {
+      "id": "M-08",
+      "name": "配对候选阶梯",
+      "scope": "Year 2010-2011，仅商品行，取消单侧含客户号者 3654 张",
+      "rule": "候选＝同客户号＋同 StockCode 的正向行，逐级追加时间与数量条件；按取消单统计去重候选单数",
+      "result": {
+        "L1_same_customer_and_sku": {"unique_1": 1331, "multi": 1952, "none": 371},
+        "L2_plus_original_date_not_after_C": {"unique_1": 1756, "multi": 1387, "none": 511},
+        "L3_plus_original_qty_gte_return_qty": {"unique_1": 1806, "multi": 1320, "none": 528},
+        "L4_plus_original_qty_equals_return_qty": {"unique_1": 937, "multi": 361, "none": 2356},
+        "L4_max_candidates_for_one_invoice": 39,
+        "L4_lag_days": {"median": 9.74, "p90": 75.3, "max": 368.2},
+        "L4_share_pairs_with_equal_unit_price_pct": 93.22
+      },
+      "note": "数量规则的选择使『无候选』从 2356 张降到 528 张，是本项目最敏感的口径开关；多候选真实存在，最多一张取消单有 39 个候选。"
+    },
+    {
+      "id": "M-09",
+      "name": "非商品行独立配对",
+      "scope": "Year 2010-2011，非商品行，取消单侧含客户号者 330 张",
+      "rule": "候选＝同客户号＋同 StockCode 的非商品正向行，且原单日期不晚于取消单日期",
+      "result": {"c_invoices": 330, "unique_1": 39, "multi": 44, "none": 247, "max_candidates_for_one_invoice": 24, "auto_match_rate_pct": 12},
+      "note": "自动配对率仅 12%、无候选占 75%，判为噪声偏高，是『非商品行是否独立配对』待定的实测依据。"
+    },
+    {
+      "id": "M-10",
+      "name": "退货额度冲突（累计超额）",
+      "scope": "Year 2010-2011，仅商品行，含客户号的取消单",
+      "rule": "按（客户号＋StockCode）汇总正向销量与取消单退货量绝对值，退货量大于销量即判超额",
+      "result": {
+        "pairs_with_any_return": 7569,
+        "pairs_quota_ok": 6833,
+        "pairs_over_quota": 736,
+        "pairs_over_quota_pct": 9.7,
+        "over_pairs_with_zero_sales": 665,
+        "c_lines_inside_over_pairs": 802,
+        "c_lines_total": 8539,
+        "c_invoices_touching_over_pairs": 425,
+        "c_invoices_total": 3383,
+        "c_invoices_touching_over_pairs_pct": 12.6,
+        "excess_qty": {"median": 2, "mean": 22.3, "max": 9360}
+      },
+      "note": "这是第 4 类差异『累计超额』规模的【下界】：按客户＋商品聚合得到，按正向行聚合会更高。665 组销售量为 0，说明原购买大概率落在切片起点之前，属切片边界盲区而非真实差异。"
+    },
+    {
+      "id": "M-11",
+      "name": "其他字段质量",
+      "scope": "两个工作表",
+      "rule": "缺失计数与单内同内容行分组计数",
+      "result": {
+        "missing_customer_id": {"Year 2009-2010": {"rows": 107927, "pct": 20.5}, "Year 2010-2011": {"rows": 135080, "pct": 24.9}},
+        "identical_lines_within_same_invoice": {"Year 2009-2010": {"groups": 6419, "rows": 13285}, "Year 2010-2011": {"groups": 4882, "rows": 10153}},
+        "non_contiguous_invoice_numbers": {"Year 2009-2010": 697, "Year 2010-2011": 60},
+        "cancellation_lines_per_invoice": {"median": 1, "max": 101}
+      },
+      "note": "identical_lines_within_same_invoice 与 M-03 的『整单重复』不是同一件事：前者是同一张单内部出现内容相同的行，本次未作为排除依据。"
+    }
+  ],
+  "not_measured": [
+    "真实退货归属（数据无原单引用，无法还原）",
+    "跨工作表重复行是否为统计系统缺陷（只能证实内容相同）",
+    "切片后的候选分布与第 4 类差异实际数量",
+    "业务端到端性能（题库要求的 1 万行对账 ≤5 秒）",
+    "DCGS* 系列编码是否为商品"
+  ]
+}

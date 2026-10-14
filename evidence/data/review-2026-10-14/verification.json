@@ -1,0 +1,139 @@
+{
+  "checked_at": "2026-10-14T20:53:40.948021+08:00",
+  "published_files": [
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\01-题目与开发流程大白话讲义.md",
+      "sha256": "ae368dd6786258e625d3f471bb1be4400239f4931290b6ba0a16d3b02e95d994"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\纠偏记录.md",
+      "sha256": "37ce4a1c629b3f98687897199c5be3f1a561e9f0c180eb1cd482ef98b15f5ff2"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\AGENTS.md",
+      "sha256": "0f1e3cbd2d7e6bd4f5f8db8de8c22d6f6b55798ec2e807bdba8aa0963de55b41"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\CLAUDE.md",
+      "sha256": "7677d89448d5ad7231fa69fd3f16f366af130e949e23a1af313941150148c0c3"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\README.md",
+      "sha256": "783599de9b6fdbff2d39e32a1697aea2b17d0a4068ea39091d184436d4417f57"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\决定记录.md",
+      "sha256": "547d8d21fdab2206cb7544a94977d124a8672960b5732929ab1185a865640922"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\待确认事项.md",
+      "sha256": "db0081a1049b082ef6601cfc8e59446afb2d13dc2ead015c4a175d2b11bfb8ba"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\怎么做.md",
+      "sha256": "d5accf4a652d536ba2c62b8fca90fdf1b07702abbc46842579a321f467dbfe87"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\怎么算做对.md",
+      "sha256": "fbabac96d0e507c902c8ab2513cda1ac385194fee8781d85d2ef8b325bbfe363"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\要做什么.md",
+      "sha256": "7c6b0e67055c4fe16aa16f0823c20bc57eaead7787856d0defcb02dfe7d9f9b1"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\选题自查表.md",
+      "sha256": "ba6f1df424e0fbc40a3c9400209075a56882f857074ade2c7d7cd3363b04fba2"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\01-选题与背景.md",
+      "sha256": "451f01c72a343525a6889a78e45fb2d09e78b3e551105fb798ccf153c2ba4ccf"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\02-需求.md",
+      "sha256": "2ea5010ee81dca56a59915f908a27021fb8539a14658e9486a86ce2d57c95e6d"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\03-设计与技术选型.md",
+      "sha256": "0c864d71e34b44f6d8fc4832f3df5026c6fe18d0fe5011cf03a83fac3a5b5d64"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\04-实现情况.md",
+      "sha256": "b6b570c6f5a5d30f2be11766d420c2345dc4b69fcd046d16ab860e1e6711d89c"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\05-测试与验收.md",
+      "sha256": "4a59bd749dc7ea6bfb2314e1c9741b4aa8a8c01bda01cbac120a7b9f14602718"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\06-开发过程.md",
+      "sha256": "ff1e88de5d347cd1d0299b3b23afcc1ebc32348ea960c584e3011a584ff2ece2"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\07-问题与解决.md",
+      "sha256": "40d288a196685406340f00eaf1202919e03a51588a06787d2242d3407ad85416"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\08-成本统计.md",
+      "sha256": "d7e65cc0bc1c54da6b97baddd0bf00e1bf6c685853cc71c3a1379fa90dd85fc3"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\09-遗留问题与计划.md",
+      "sha256": "e6b25b34c7f1ba3e26a2a6b8d7bba6e7bca61027fc13b4089fbd3abf776ab8c6"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-学习指南\\中期报告素材（不提交）\\10-自查.md",
+      "sha256": "429e970e9330c0ba1d50e13a8fd7728c2d70a0f79d77598aac3a8a09e5dbd9b2"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\data\\README.md",
+      "sha256": "3b0b6f713062ac43a4ab1d2024864df09ebcc6a3e0f697556eabe8380b2a5bb1"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\每日工作记录\\2026-10-14\\今天做了什么.md",
+      "sha256": "5e26b75888d3d843b1b0838df418c5e1723e8808b7b28014b95a0f6bbfdea662"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\audit_rule_inputs.py",
+      "sha256": "02b23322d27dac0067a458b319446acfc85cc370b67ee51cba36f4489b18f9e7"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\scripts\\batch_validate_rules.py",
+      "sha256": "c92eb93a2915c2d8c025da29afaa57b39a09041b4b74a5f365bcf141932d4cb0"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\rule_input_audit.json",
+      "sha256": "66176b71c48e43ad0109d94948659d6ffa3a8052f9569cd037ce501c376c5491"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\batch_validation.json",
+      "sha256": "2181189a19410a824a257e2c1ebd354c5b79ec76933ade19c7fa679e0db70316"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\batch_line_results.csv",
+      "sha256": "db61f6b6b28567b38dba28ef800d65ca28cdbba8425e13bbf5bc3fd9f68a6569"
+    },
+    {
+      "path": "E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\evidence\\data\\review-2026-10-14\\document_checks.json",
+      "sha256": "b8ad835d4d85a56d4546f0475b3e19ca3dd30168289a4d7004382d66b6ac5304"
+    }
+  ],
+  "lint": {
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  "daily_export": {
+    "exit_code": 0,
+    "stdout": "Daily record: E:\\佘逍遥的大学_大二\\PythonCoding\\VC-R-03-退货对账与差异处理系统\\每日工作记录\\2026-10-14\nActual commits exported: 0\n",
+    "stderr": ""
+  },
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'AGENTS.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'CLAUDE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'data/README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of '决定记录.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of '待确认事项.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of '怎么做.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of '怎么算做对.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of '要做什么.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of '选题自查表.md', CRLF will be replaced by LF the next time Git touches it\n"
+  },
+  "initial_staging_lint": "First staging check found 7 unused-variable/import-order diagnostics; corrected before final audit reruns. This is a factual summary, not a verbatim command log.",
+  "application_implemented": false,
+  "commit_or_push_performed": false
+}

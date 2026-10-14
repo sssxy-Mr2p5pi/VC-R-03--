@@ -1,0 +1,151 @@
+{
+  "measured_at": "2026-10-15T00:51:25.587730+08:00",
+  "scope": "Module A only: hash/read/clean/quality/store/commit/query. B/C absent; NFR-01 not executed.",
+  "nfr01_status": "NOT_EXECUTED",
+  "sample_manifest": {
+    "prepared_at": "2026-10-15T00:06:35.582152+08:00",
+    "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+    "sample": "data/processed/performance-10000.xlsx",
+    "sample_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+    "mapping": "evidence/performance/sample-v1/source_rows.csv",
+    "mapping_sha256": "ce7e573f940712d256cb82f258ab8c94d819031ec3b0598048c626f42ef204cd",
+    "script_sha256": "a31f3cf687e1ece836e2e99b9382ac790ef73492fc2480b431154952073eab3e",
+    "rules": "D-33; whole-invoice greedy; raw rows included before exclusions; fixed starts; no outcome filtering",
+    "worksheets": [
+      {
+        "sheet": "Year 2009-2010",
+        "threshold_excel_row": 131367,
+        "first_excel_row": 131393,
+        "last_excel_row": 137162,
+        "rows": 5000,
+        "invoices": 332,
+        "whole_invoices_verified": true
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "threshold_excel_row": 135479,
+        "first_excel_row": 135487,
+        "last_excel_row": 140557,
+        "rows": 5000,
+        "invoices": 290,
+        "whole_invoices_verified": true
+      }
+    ],
+    "rows": 10000,
+    "read_values_and_types_verified": true,
+    "source_unchanged": true,
+    "performance_acceptance": "not executed; A/B/initial-ticket pipeline required"
+  },
+  "python": "3.12.10",
+  "os": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "sqlite": "3.49.1",
+  "packages": {
+    "Flask": "3.1.3",
+    "openpyxl": "3.1.5",
+    "pytest": "9.1.1"
+  },
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) Ultra 7 265H",
+    "ram_bytes": 33777467392
+  },
+  "git_head": "a802f3f1ab580599abfb7d806d9cc63dd9854cad",
+  "working_tree": "measured before task commit; exact code hashes below",
+  "code_sha256": {
+    "config\\nonproduct-v1.json": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+    "scripts\\import_data.py": "dbe835c33137479c10958aaea74274aa809cbb879526d013c255292bda20bc65",
+    "scripts\\measure_module_a.py": "84b5b82bd798388edc219bebf51fa9f99f4f1d9cc4208980c57e5ff8edbc755f",
+    "src\\vcr03\\__init__.py": "e77fce23574892c87e7e4d92cc38e46c99429521ac0f2a8f8d7ec1f43f995297",
+    "src\\vcr03\\__main__.py": "0aea8c68fcfc2342c78e9eab6c592be944f1c2fb6da9f873301b03bc0451813e",
+    "src\\vcr03\\cli.py": "ecc0656da40791270365bedab0219dcf5288d969671759668d16abd65260da92",
+    "src\\vcr03\\ingest\\__init__.py": "1d4ef617e2b1333d53b25dee9f4b5b6a8dadd8c1bce29fa0d3149c74c34bb8e2",
+    "src\\vcr03\\ingest\\dictionary.py": "cbdd03452e9baa9d328c6bfd6bf15800aa38995b27e504c5d227c34d63e80c68",
+    "src\\vcr03\\ingest\\rules.py": "585ca08640a4147f8faeb020552a8b2b614e6091a92cb6cdd75e9c7fe3bda41e",
+    "src\\vcr03\\ingest\\service.py": "3dff07a0b106ad06db0d203355df43d8ad556d68c68f9512b74b451d30ef2ba8",
+    "src\\vcr03\\storage\\__init__.py": "ba488aea360d397d744d84b3b78bbded8a2ba59ed9fcc7b420bac61289decb5b",
+    "src\\vcr03\\storage\\database.py": "dff22098629fea971b3892fdd532fcc97d4574c2816c61c1a9608d5ce58ddc3d",
+    "src\\vcr03\\web\\__init__.py": "ec77a9a194086a51308f4e3544c502e0320ad65960c27c6550e990824fd18e79",
+    "src\\vcr03\\web\\templates\\base.html": "3470961bff8c9e8fc9a9d477badffd89b0b0047b68a6717d3dfb84054972df94",
+    "src\\vcr03\\web\\templates\\detail.html": "a6f76a07428552e0a289ee17883ccfee4a0c92b1f042b089b1830b5ee129bb4d",
+    "src\\vcr03\\web\\templates\\error.html": "052fd9d1947168c2fdaadc8f5699e7b5b549dc7c7ec7e63886f857edb81b27b6",
+    "src\\vcr03\\web\\templates\\index.html": "91acb7a8b1c0e5f52b7873c2cd9b58a5b44927a16489504add71a888a71cd69d",
+    "src\\vcr03\\web\\templates\\lines.html": "491f4e1d38be65964deaa9c688cd041b9b0b8d62599801a67c11b5a554dc8331"
+  },
+  "baseline": "2026-10-15",
+  "cache": "Normal OS cache, no cache flush; fresh process and empty database each run",
+  "runs": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "elapsed_seconds": 1.2217066999874078,
+      "row_counts": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "nonproduct_rows": 89,
+        "quality_rows": 2067
+      },
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1"
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "elapsed_seconds": 1.2231116999755614,
+      "row_counts": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "nonproduct_rows": 89,
+        "quality_rows": 2067
+      },
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1"
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "elapsed_seconds": 1.2190672000288032,
+      "row_counts": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "nonproduct_rows": 89,
+        "quality_rows": 2067
+      },
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1"
+    },
+    {
+      "run": 4,
+      "exit_code": 0,
+      "elapsed_seconds": 1.2207553000189364,
+      "row_counts": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "nonproduct_rows": 89,
+        "quality_rows": 2067
+      },
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1"
+    },
+    {
+      "run": 5,
+      "exit_code": 0,
+      "elapsed_seconds": 1.2449323000037111,
+      "row_counts": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "nonproduct_rows": 89,
+        "quality_rows": 2067
+      },
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1"
+    }
+  ],
+  "successful_runs": 5,
+  "max_seconds": 1.2449323000037111,
+  "median_seconds": 1.2217066999874078
+}

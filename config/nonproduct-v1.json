@@ -1,0 +1,129 @@
+{
+  "version": "nonproduct-v1",
+  "confirmed_by": "项目学生：D-17/D-29及DP-06",
+  "change_reason": "首次实现已经确认的精确编码与完整模式，不扩充判定集合",
+  "entries": [
+    {
+      "code": "POST",
+      "name": "邮费",
+      "category": "运费",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "DOT",
+      "name": "网站邮费",
+      "category": "运费",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "M",
+      "name": "人工录入",
+      "category": "其他已识别非商品",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "D",
+      "name": "折扣",
+      "category": "优惠抵扣",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "C2",
+      "name": "运费",
+      "category": "运费",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "S",
+      "name": "样品",
+      "category": "其他已识别非商品",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "B",
+      "name": "B",
+      "category": "其他已识别非商品",
+      "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "PADS",
+      "name": "PADS",
+      "category": "其他已识别非商品",
+      "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "ADJUST",
+      "name": "ADJUST",
+      "category": "其他已识别非商品",
+      "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "ADJUST2",
+      "name": "ADJUST2",
+      "category": "其他已识别非商品",
+      "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "BANK CHARGES",
+      "name": "手续费",
+      "category": "其他已识别非商品",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "AMAZONFEE",
+      "name": "AMAZONFEE",
+      "category": "其他已识别非商品",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "code": "CRUK",
+      "name": "CRUK",
+      "category": "其他已识别非商品",
+      "source": "课程题面口径说明非商品段及DP-06",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "TEST\\d+",
+      "name": "TEST编码",
+      "category": "其他已识别非商品",
+      "source": "DP-06项目完整模式",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    },
+    {
+      "pattern": "GIFT_\\d+_\\d+",
+      "name": "礼品券",
+      "category": "其他已识别非商品",
+      "source": "课程gift编码及DP-06精确模式",
+      "maintainer": "项目学生",
+      "confirmed_on": "2026-10-14"
+    }
+  ]
+}

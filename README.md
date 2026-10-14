@@ -1,57 +1,55 @@
 # VC-R-03 退货对账与差异处理系统
 
-当前为规格与实现准备阶段：已取得官方数据、完成环境与全量规则只读验证，确定 Flask＋SQLite 开发方案。业务页面、正式配对台账与工作流尚未实现。
+当前模块A已实现并核验；模块B/C尚未实现。实际运行环境为Python 3.12.10、Flask 3.1.3、SQLite 3.49.1，依赖仅安装在项目.venv。规则合同见《要做什么》《怎么做》《怎么算做对》，现行决定D-18～D-37；开工先执行基线检查。
 
-GitHub 远端由用户指定为 https://github.com/sssxy-Mr2p5pi/VC-R-03-- 。
-本地工作分支为 `setup/data-environment`，提交与远端状态以实际 Git 记录为准。2026-10-14 本轮仅更新规格与证据，不提交或推送。
-
-## 先读哪里
-
-- `待确认事项.md`：教师口径、正式编码表、性能测量细则和实际权限配置等剩余事项。
-- `要做什么.md` / `怎么做.md` / `怎么算做对.md`：当前开发规格、状态机与35条验收设计；执行结果须另行记录。
-- `CLAUDE.md`：完整项目规矩；Codex 入口为 `AGENTS.md`。
-- 学习指南在项目外 `../VC-R-03-学习指南/`，按本人要求不入版本记录和课程提交包。
-
-## 已验证的准备命令
+## 本机运行
 
 在项目根目录执行：
 
 ```powershell
-.\.venv\Scripts\python.exe -X utf8 .\scripts\check_environment.py
-.\.venv\Scripts\python.exe -X utf8 .\scripts\download_data.py
-.\.venv\Scripts\python.exe -X utf8 .\scripts\profile_data.py
-.\.venv\Scripts\python.exe -X utf8 .\scripts\check_guard.py
-.\.venv\Scripts\python.exe -m ruff check .\scripts
+.\.venv\Scripts\python.exe -X utf8 scripts/check_baseline.py
+.\.venv\Scripts\python.exe -X utf8 scripts/import_data.py --source full
+.\.venv\Scripts\python.exe -X utf8 scripts/import_data.py --source performance
+.\.venv\Scripts\python.exe -X utf8 scripts/run_app.py
 ```
 
-环境丢失或换机后先安装 Python 3.12 与 Git，再运行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup.ps1`。脚本仅为本项目建 `.venv` 并按锁定依赖安装。
-首次获取原始文件需要联网。原始大文件不进 Git；来源、哈希与可重复获取脚本进入 Git。换机后须重新下载并核对来源。
+浏览器打开http://127.0.0.1:5000。固定文件按钮与CLI共用ingest_workbook；可查看R1、非商品统计、来源/排除/质量分页和原始明细定位。服务仅绑定本机，关闭调试。首次全量导入需要等待，同源同规则再次导入复用来源和分析；全量与样本使用独立库。
 
-## 今天收工
+## 重建环境与数据
 
-实际完成一件事后进行真实 Git 提交，再执行：
+先安装Python 3.12与Git，在项目根目录执行：
 
 ```powershell
-.\.venv\Scripts\python.exe -X utf8 .\scripts\save_daily_log.py
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup.ps1
+.\.venv\Scripts\python.exe -X utf8 scripts/download_data.py
+.\.venv\Scripts\python.exe -X utf8 scripts/build_performance_sample.py
 ```
 
-脚本创建当天说明和截图目录、导出真实当日 Git 历史，不编写“已完成”叙述，不生成截图。按 daily-summary 技能整理5～8条真实事项，由本人核对并补实际截图。
-`提交记录.txt` 是从 Git 导出的文件，不再进入 Git，避免为了记录自身提交而产生循环；课程打包脚本会直接收录每日目录中的它。
+原始ZIP/XLSX、派生样本、SQLite库不进入Git；换机重新获取原数据并核对哈希，样本来源映射保存在evidence/performance/sample-v1/。制样采用固定起点和整单贪心，两表各5000行。已有样本及计时目录拒绝覆盖；Git中清单存在而样本缺失时，制样脚本按既有映射受限重建，核验全部原值/类型及原样本字节哈希后发布。封装原时间仅复现字节，真实回执另记；不匹配时停止报告，不重新选样。
 
-## 当前证据和缺项
+## 已完成验证与限制
 
-环境：`evidence/environment/`；数据：`evidence/data/download_manifest.json`、`raw_profile.json`、`raw_preview.csv`。
-数据全量 1,067,371 行。实际字段名、两个工作表范围及异常统计以 raw_profile.json 为准；已做规则只读干跑，尚未生成正式业务数据、配对台账或派单。
-Hook 离线自检通过不能证明 Hook 在新项目会话中已被本人信任并实际拦截。
-准备工具检查保存于 `evidence/tests/preparation_checks.json`，Hook 离线检查保存于 `evidence/tests/guard_checks.json`。两者都不计入课程要求的业务测试数量。
-业务测试、本人复跑截图、完整报告、PPT、跨日证据等仍需开发过程中完成。
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\python.exe -m ruff check src tests scripts
+.\.venv\Scripts\python.exe -X utf8 scripts/measure_module_a.py
+```
 
-提交前运行 `scripts/check_submission.py` 查看可机械检查的缺项；当前阶段预期会报告缺项。
-报告使用 `templates/大作业报告-模板.docx`，形成本人内容后保存到根目录固定名称；中期 3—5 页，最终 8—12 页。
-官方打包脚本最后才运行，输出位于项目旁，学习指南不在其收集范围内。
+模块A当前42项自动测试及独立复验通过；真实全量1067371＝1041455＋25916，非商品保留5830，质量清单229795。D-35新旧全部逐行输出变化0，来源及旧分析保留。9个本机HTTP页面/API核验通过；本人视觉核验与截图待补。
 
-## 2026-10-14 设计验证
+固定样本10000＝9939＋61；五次A阶段最大1.244932秒。A阶段不包含B候选配对及C初始建单，完整NFR-01未执行。全部阶段记录和曾失败制样、独立True/1反例都保留在evidence/，合成测试数据不冒充真实交易。
 
-`evidence/data/review-2026-10-14/` 保存输入核验、全量规则干跑和逐行结果；对应只读脚本在 scripts。它们不创建业务数据库，不计入业务测试数量，也不替代10,000行性能验收。开发方案与拟定进度见《怎么做》，外部讲义继续保留在学习指南目录。
+待完成：模块B/C、R2/R3、额度与派单流程、正式审批及端到端性能；P-04实际人员/权限/管理链在真实审批演示前确认。报告、PPT、本人复跑、跨日记录、真实技能/Hook证据及课程工具等效认定按原计划完成，详见《待确认事项》。
 
-S1—S11及后续意见审查：`evidence/reviews/2026-10-14-S1-S11/审查结论.md`。规格已补输入合同与质量处置，仍为19条需求、35条验收设计；没有新增应用实现或业务测试执行。
+## 证据与收工
+
+- 应用验证：evidence/tests/module-a/、evidence/data/module-a-2026-10-15/。
+- 样本及计时：evidence/performance/sample-v1/、module-a-phase/；探索/旧版本/并行资源竞争时的阶段结果单独保留。
+- 历史只读分析：evidence/data/review-2026-10-14/；只用于设计核验，不能写成B/C应用结果。
+- 按.agents/skills/daily-summary/SKILL.md整理真实日志，并执行scripts/save_daily_log.py导出真实Git提交。提交记录.txt不再进入Git，课程打包直接收录，避免自记录循环。
+- 学习指南、纠偏和中期报告素材位于项目外../VC-R-03-学习指南/，不入Git或课程包。本人截图缺失时如实留缺，不生成替代图片。
+
+项目分支setup/data-environment，用户指定远端https://github.com/sssxy-Mr2p5pi/VC-R-03--；本轮仅本地存档，未推送。课程报告固定名大作业报告.docx，中期PPT名中期汇报.pptx；提交前用scripts/check_submission.py检查机械缺项。当前缺项不会因A完成而自动消失。
+
+
+2026-10-15 D-37实际补充：隔离新检出工作区受限重建成功，10000行原值/类型及原字节SHA-256相同，清单不变、原样本未动；再次执行拒绝覆盖。新增7项制样工具反例单列，pytest合计49项（A业务/输入42＋制样工具7）、独立复验49项均通过；NFR-01仍未执行。证据见evidence/performance/sample-rebuild/与evidence/tests/module-a/pytest-with-rebuild.xml、independent-with-rebuild.xml。

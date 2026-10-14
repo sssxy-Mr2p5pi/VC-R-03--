@@ -1,0 +1,6 @@
+{
+  "actual_error": "TypeError: NumberFormat.formatCode expected str, received None",
+  "cause": "EmptyCell.number_format=None copied to new workbook",
+  "source_unchanged": true,
+  "action": "Preserved failed derived file; only copy defined formats, verify temporary output before activation"
+}

@@ -1,0 +1,160 @@
+{
+  "measured_at": "2026-10-14T23:39:22.385576+08:00",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_unchanged": true,
+  "scope": "Both sheets, 5000 raw rows each, whole-invoice greedy selection. Four start positions explored openly. Candidate activity uses existing design dry-run rule; not app/performance acceptance.",
+  "cases": [
+    {
+      "percent": 0,
+      "selection": [
+        {
+          "sheet": "Year 2009-2010",
+          "threshold_excel_row": 2,
+          "selected_rows": 5000,
+          "first_excel_row": 2,
+          "last_excel_row": 6379,
+          "invoice_count": 274
+        },
+        {
+          "sheet": "Year 2010-2011",
+          "threshold_excel_row": 2,
+          "selected_rows": 5000,
+          "first_excel_row": 2,
+          "last_excel_row": 5265,
+          "invoice_count": 304
+        }
+      ],
+      "activity": {
+        "raw_rows": 10000,
+        "retained_rows": 9988,
+        "excluded_rows": 12,
+        "nonproduct_retained_rows": 35,
+        "merchandise_cancellation_rows": 195,
+        "with_candidates": 16,
+        "proposed_auto_rows": 11,
+        "cumulative_over_quota_rows": 0,
+        "candidate_counts": {
+          "no_candidate": 176,
+          "unique_candidate": 11,
+          "multiple_candidates": 5,
+          "missing_customer": 3
+        }
+      }
+    },
+    {
+      "percent": 0.25,
+      "selection": [
+        {
+          "sheet": "Year 2009-2010",
+          "threshold_excel_row": 131367,
+          "selected_rows": 5000,
+          "first_excel_row": 131393,
+          "last_excel_row": 137162,
+          "invoice_count": 332
+        },
+        {
+          "sheet": "Year 2010-2011",
+          "threshold_excel_row": 135479,
+          "selected_rows": 5000,
+          "first_excel_row": 135487,
+          "last_excel_row": 140557,
+          "invoice_count": 290
+        }
+      ],
+      "activity": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "nonproduct_retained_rows": 89,
+        "merchandise_cancellation_rows": 229,
+        "with_candidates": 46,
+        "proposed_auto_rows": 33,
+        "cumulative_over_quota_rows": 1,
+        "candidate_counts": {
+          "unique_candidate": 41,
+          "unique_price_or_quantity_difference": 8,
+          "no_candidate": 181,
+          "missing_customer": 2,
+          "multiple_candidates": 5
+        }
+      }
+    },
+    {
+      "percent": 0.5,
+      "selection": [
+        {
+          "sheet": "Year 2009-2010",
+          "threshold_excel_row": 262732,
+          "selected_rows": 5000,
+          "first_excel_row": 262871,
+          "last_excel_row": 268205,
+          "invoice_count": 322
+        },
+        {
+          "sheet": "Year 2010-2011",
+          "threshold_excel_row": 270957,
+          "selected_rows": 5000,
+          "first_excel_row": 270961,
+          "last_excel_row": 276538,
+          "invoice_count": 248
+        }
+      ],
+      "activity": {
+        "raw_rows": 10000,
+        "retained_rows": 9965,
+        "excluded_rows": 35,
+        "nonproduct_retained_rows": 71,
+        "merchandise_cancellation_rows": 164,
+        "with_candidates": 16,
+        "proposed_auto_rows": 10,
+        "cumulative_over_quota_rows": 2,
+        "candidate_counts": {
+          "no_candidate": 145,
+          "unique_candidate": 14,
+          "missing_customer": 3,
+          "multiple_candidates": 2,
+          "unique_price_or_quantity_difference": 2
+        }
+      }
+    },
+    {
+      "percent": 0.75,
+      "selection": [
+        {
+          "sheet": "Year 2009-2010",
+          "threshold_excel_row": 394097,
+          "selected_rows": 5000,
+          "first_excel_row": 394115,
+          "last_excel_row": 399360,
+          "invoice_count": 231
+        },
+        {
+          "sheet": "Year 2010-2011",
+          "threshold_excel_row": 406434,
+          "selected_rows": 5000,
+          "first_excel_row": 406447,
+          "last_excel_row": 411805,
+          "invoice_count": 229
+        }
+      ],
+      "activity": {
+        "raw_rows": 10000,
+        "retained_rows": 9995,
+        "excluded_rows": 5,
+        "nonproduct_retained_rows": 57,
+        "merchandise_cancellation_rows": 133,
+        "with_candidates": 10,
+        "proposed_auto_rows": 7,
+        "cumulative_over_quota_rows": 0,
+        "candidate_counts": {
+          "no_candidate": 122,
+          "multiple_candidates": 2,
+          "unique_candidate": 8,
+          "missing_customer": 1,
+          "unique_price_or_quantity_difference": 1
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 24.05084680003347
+}

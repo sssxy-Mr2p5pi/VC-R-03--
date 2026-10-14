@@ -1,0 +1,546 @@
+{
+  "recorded_at": "2026-10-15T00:52:47.725038+08:00",
+  "scope": "Actual localhost HTTP functional check; no visual screenshot or human rerun",
+  "pages": {
+    "/": {
+      "status": 200,
+      "bytes": 6049
+    },
+    "/api/summary": {
+      "status": 200,
+      "bytes": 9163,
+      "summary": {
+        "approved_refresh": {
+          "changed_output_rows": 0,
+          "compared_rows": 1067371,
+          "old_source_and_analysis_preserved": true,
+          "previous_snapshot_id": "bdc90aabfe4e1cf3a77ea8d37a6c86a6712e335ad7848cbd165fc55887986325"
+        },
+        "dictionary_hash": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+        "dictionary_version": "nonproduct-v1",
+        "excluded_rows": 25916,
+        "exclusion_primary_counts": {
+          "CROSS_SHEET_DUPLICATE": 22523,
+          "NON_C_NEGATIVE_QUANTITY": 3393
+        },
+        "exclusion_union": {
+          "duplicate": 22523,
+          "negative": 3457,
+          "overlap": 64
+        },
+        "invoice_type_conflicts": [],
+        "invoice_version_conflicts": [],
+        "key_merge_groups": 174,
+        "nonproduct": [
+          {
+            "amount": "6835.24",
+            "cancel": 31,
+            "category": "其他已识别非商品",
+            "code": "ADJUST",
+            "confirmed_on": "2026-10-14",
+            "count": 67,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "ADJUST",
+            "sale": 36,
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json"
+          },
+          {
+            "amount": "731.05",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "ADJUST2",
+            "confirmed_on": "2026-10-14",
+            "count": 3,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "ADJUST2",
+            "sale": 3,
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json"
+          },
+          {
+            "amount": "-221520.50",
+            "cancel": 33,
+            "category": "其他已识别非商品",
+            "code": "AMAZONFEE",
+            "confirmed_on": "2026-10-14",
+            "count": 36,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "AMAZONFEE",
+            "sale": 3,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-147614.08",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "B",
+            "count": 6,
+            "invalid_amount_rows": 0,
+            "name": "坏账调整单",
+            "sale": 6
+          },
+          {
+            "amount": "-35482.249",
+            "cancel": 66,
+            "category": "其他已识别非商品",
+            "code": "BANK CHARGES",
+            "confirmed_on": "2026-10-14",
+            "count": 100,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "手续费",
+            "sale": 34,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "13136",
+            "cancel": 7,
+            "category": "运费",
+            "code": "C2",
+            "confirmed_on": "2026-10-14",
+            "count": 277,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "运费",
+            "sale": 270,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-7933.43",
+            "cancel": 16,
+            "category": "其他已识别非商品",
+            "code": "CRUK",
+            "confirmed_on": "2026-10-14",
+            "count": 16,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "CRUK",
+            "sale": 0,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-12879.63",
+            "cancel": 168,
+            "category": "优惠抵扣",
+            "code": "D",
+            "confirmed_on": "2026-10-14",
+            "count": 173,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "折扣",
+            "sale": 5,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "309844.10",
+            "cancel": 3,
+            "category": "运费",
+            "code": "DOT",
+            "confirmed_on": "2026-10-14",
+            "count": 1425,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "网站邮费",
+            "sale": 1422,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "126.21",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_10",
+            "confirmed_on": "2026-10-14",
+            "count": 16,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 16,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "471.06",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_20",
+            "confirmed_on": "2026-10-14",
+            "count": 29,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 29,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "610.09",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_30",
+            "confirmed_on": "2026-10-14",
+            "count": 29,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 29,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "166.09",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_40",
+            "confirmed_on": "2026-10-14",
+            "count": 7,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 7,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "253.59",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_50",
+            "confirmed_on": "2026-10-14",
+            "count": 8,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 8,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "0",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_60",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 2,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "59.57",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_70",
+            "confirmed_on": "2026-10-14",
+            "count": 3,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 3,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "0.00",
+            "cancel": 1,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_80",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 3,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "0",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "GIFT_0001_90",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "礼品券",
+            "pattern": "GIFT_\\d+_\\d+",
+            "sale": 2,
+            "source": "课程gift编码及DP-06精确模式"
+          },
+          {
+            "amount": "-82935.57",
+            "cancel": 535,
+            "category": "其他已识别非商品",
+            "code": "M",
+            "confirmed_on": "2026-10-14",
+            "count": 1403,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "人工录入",
+            "sale": 868,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-36.583",
+            "cancel": 1,
+            "category": "其他已识别非商品",
+            "code": "PADS",
+            "confirmed_on": "2026-10-14",
+            "count": 19,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "PADS",
+            "sale": 18,
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json"
+          },
+          {
+            "amount": "110430.41",
+            "cancel": 228,
+            "category": "运费",
+            "code": "POST",
+            "confirmed_on": "2026-10-14",
+            "count": 2086,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "邮费",
+            "sale": 1858,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-6000.85",
+            "cancel": 99,
+            "category": "其他已识别非商品",
+            "code": "S",
+            "confirmed_on": "2026-10-14",
+            "count": 102,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "样品",
+            "sale": 3,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "202.5",
+            "cancel": 4,
+            "category": "其他已识别非商品",
+            "code": "TEST001",
+            "confirmed_on": "2026-10-14",
+            "count": 15,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "TEST编码",
+            "pattern": "TEST\\d+",
+            "sale": 11,
+            "source": "DP-06项目完整模式"
+          },
+          {
+            "amount": "1",
+            "cancel": 0,
+            "category": "其他已识别非商品",
+            "code": "TEST002",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "TEST编码",
+            "pattern": "TEST\\d+",
+            "sale": 2,
+            "source": "DP-06项目完整模式"
+          }
+        ],
+        "nonproduct_rows": 5830,
+        "normalization_version": "nfkc-trim-uppercase-u15-v1",
+        "quality_rows": 229795,
+        "r1_valid": true,
+        "raw_rows": 1067371,
+        "read_version": "openpyxl-3.1.5-decimal-str-v1",
+        "retained_rows": 1041455,
+        "scope": "module A import and quality only; no matching, ticket, allocation or NFR acceptance",
+        "side_counts": {
+          "CANCEL": 19165,
+          "SALE": 1022290
+        },
+        "snapshot_id": "b1bb1d4da547783c0b17c6948d5c13fcd55d0a3f55a4b9a34fd04886e9e64b0e",
+        "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+        "source_unchanged": true,
+        "suspicious_key_groups": 0
+      }
+    },
+    "/lines?view=quality": {
+      "status": 200,
+      "bytes": 16268
+    },
+    "/lines?view=excluded": {
+      "status": 200,
+      "bytes": 16663
+    },
+    "/lines?view=nonproduct": {
+      "status": 200,
+      "bytes": 17061
+    },
+    "/lines?page=2": {
+      "status": 200,
+      "bytes": 17058
+    },
+    "/line/1": {
+      "status": 200,
+      "bytes": 2311
+    },
+    "/?source=performance": {
+      "status": 200,
+      "bytes": 4195
+    },
+    "/api/summary?source=performance": {
+      "status": 200,
+      "bytes": 3486,
+      "summary": {
+        "dictionary_hash": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+        "dictionary_version": "nonproduct-v1",
+        "excluded_rows": 61,
+        "exclusion_primary_counts": {
+          "NON_C_NEGATIVE_QUANTITY": 61
+        },
+        "exclusion_union": {
+          "duplicate": 0,
+          "negative": 61,
+          "overlap": 0
+        },
+        "invoice_type_conflicts": [],
+        "invoice_version_conflicts": [],
+        "key_merge_groups": 18,
+        "nonproduct": [
+          {
+            "amount": "0.00",
+            "cancel": 1,
+            "category": "其他已识别非商品",
+            "code": "AMAZONFEE",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "AMAZONFEE",
+            "sale": 1,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-39.24",
+            "cancel": 1,
+            "category": "其他已识别非商品",
+            "code": "BANK CHARGES",
+            "confirmed_on": "2026-10-14",
+            "count": 1,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "手续费",
+            "sale": 0,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "200",
+            "cancel": 0,
+            "category": "运费",
+            "code": "C2",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "运费",
+            "sale": 4,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-162.24",
+            "cancel": 1,
+            "category": "优惠抵扣",
+            "code": "D",
+            "confirmed_on": "2026-10-14",
+            "count": 1,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "折扣",
+            "sale": 0,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "2711.38",
+            "cancel": 0,
+            "category": "运费",
+            "code": "DOT",
+            "confirmed_on": "2026-10-14",
+            "count": 15,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "网站邮费",
+            "sale": 15,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-2718.99",
+            "cancel": 16,
+            "category": "其他已识别非商品",
+            "code": "M",
+            "confirmed_on": "2026-10-14",
+            "count": 35,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "人工录入",
+            "sale": 19,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "1496.10",
+            "cancel": 8,
+            "category": "运费",
+            "code": "POST",
+            "confirmed_on": "2026-10-14",
+            "count": 27,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "邮费",
+            "sale": 19,
+            "source": "课程题面口径说明非商品段及DP-06"
+          },
+          {
+            "amount": "-1129.33",
+            "cancel": 4,
+            "category": "其他已识别非商品",
+            "code": "S",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "invalid_amount_rows": 0,
+            "maintainer": "项目学生",
+            "name": "样品",
+            "sale": 0,
+            "source": "课程题面口径说明非商品段及DP-06"
+          }
+        ],
+        "nonproduct_rows": 89,
+        "normalization_version": "nfkc-trim-uppercase-u15-v1",
+        "quality_rows": 2067,
+        "r1_valid": true,
+        "raw_rows": 10000,
+        "read_version": "openpyxl-3.1.5-decimal-str-v1",
+        "retained_rows": 9939,
+        "scope": "module A import and quality only; no matching, ticket, allocation or NFR acceptance",
+        "side_counts": {
+          "CANCEL": 260,
+          "SALE": 9679
+        },
+        "snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1",
+        "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+        "source_unchanged": true,
+        "suspicious_key_groups": 0
+      }
+    }
+  },
+  "real_full_page_reimport": {
+    "source_rows_before": 1067371,
+    "source_rows_after": 1067371,
+    "reused": true
+  }
+}

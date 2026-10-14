@@ -1,0 +1,74 @@
+[
+  {
+    "case": "bool_then_number",
+    "summary": {
+      "raw_rows": 2,
+      "retained_rows": 2,
+      "excluded_rows": 0,
+      "quality_rows": 2,
+      "invoice_version_conflicts": [
+        "100"
+      ],
+      "invoice_type_conflicts": [
+        "100"
+      ]
+    },
+    "rows": [
+      {
+        "sheet": "Year 2009-2010",
+        "disposition": "RETAINED",
+        "quantity": null,
+        "exclusion_primary": null,
+        "primary_reason": "QUANTITY_INVALID_OR_SIGN",
+        "candidate_comparable": 0,
+        "quality_tags": "[{\"field\":\"Quantity\",\"code\":\"NUMERIC_TYPE_INVALID\"},{\"field\":\"Invoice\",\"code\":\"INVOICE_DEDUP_TYPE_CONFLICT\"}]"
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "disposition": "RETAINED",
+        "quantity": 1,
+        "exclusion_primary": null,
+        "primary_reason": "INVOICE_DEDUP_TYPE_CONFLICT",
+        "candidate_comparable": 0,
+        "quality_tags": "[{\"field\":\"Invoice\",\"code\":\"INVOICE_DEDUP_TYPE_CONFLICT\"}]"
+      }
+    ],
+    "active_matches_returned_snapshot": true
+  },
+  {
+    "case": "number_then_bool",
+    "summary": {
+      "raw_rows": 2,
+      "retained_rows": 2,
+      "excluded_rows": 0,
+      "quality_rows": 2,
+      "invoice_version_conflicts": [
+        "100"
+      ],
+      "invoice_type_conflicts": [
+        "100"
+      ]
+    },
+    "rows": [
+      {
+        "sheet": "Year 2009-2010",
+        "disposition": "RETAINED",
+        "quantity": 1,
+        "exclusion_primary": null,
+        "primary_reason": "INVOICE_DEDUP_TYPE_CONFLICT",
+        "candidate_comparable": 0,
+        "quality_tags": "[{\"field\":\"Invoice\",\"code\":\"INVOICE_DEDUP_TYPE_CONFLICT\"}]"
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "disposition": "RETAINED",
+        "quantity": null,
+        "exclusion_primary": null,
+        "primary_reason": "QUANTITY_INVALID_OR_SIGN",
+        "candidate_comparable": 0,
+        "quality_tags": "[{\"field\":\"Quantity\",\"code\":\"NUMERIC_TYPE_INVALID\"},{\"field\":\"Invoice\",\"code\":\"INVOICE_DEDUP_TYPE_CONFLICT\"}]"
+      }
+    ],
+    "active_matches_returned_snapshot": true
+  }
+]

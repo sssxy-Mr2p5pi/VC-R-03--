@@ -1,0 +1,34 @@
+{
+  "prepared_at": "2026-10-15T00:06:35.582152+08:00",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "sample": "data/processed/performance-10000.xlsx",
+  "sample_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+  "mapping": "evidence/performance/sample-v1/source_rows.csv",
+  "mapping_sha256": "ce7e573f940712d256cb82f258ab8c94d819031ec3b0598048c626f42ef204cd",
+  "script_sha256": "a31f3cf687e1ece836e2e99b9382ac790ef73492fc2480b431154952073eab3e",
+  "rules": "D-33; whole-invoice greedy; raw rows included before exclusions; fixed starts; no outcome filtering",
+  "worksheets": [
+    {
+      "sheet": "Year 2009-2010",
+      "threshold_excel_row": 131367,
+      "first_excel_row": 131393,
+      "last_excel_row": 137162,
+      "rows": 5000,
+      "invoices": 332,
+      "whole_invoices_verified": true
+    },
+    {
+      "sheet": "Year 2010-2011",
+      "threshold_excel_row": 135479,
+      "first_excel_row": 135487,
+      "last_excel_row": 140557,
+      "rows": 5000,
+      "invoices": 290,
+      "whole_invoices_verified": true
+    }
+  ],
+  "rows": 10000,
+  "read_values_and_types_verified": true,
+  "source_unchanged": true,
+  "performance_acceptance": "not executed; A/B/initial-ticket pipeline required"
+}

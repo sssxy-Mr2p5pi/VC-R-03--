@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-10-15T01:08:24.931896+08:00",
+  "scope": "Isolated fresh-checkout simulation: source, scripts, source mapping/manifest present; sample absent",
+  "receipt": {
+    "rebuilt_at": "2026-10-15T01:08:24.504672+08:00",
+    "scope": "Same fixed sample, no reselection",
+    "rows_verified": 10000,
+    "sample_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+    "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+    "preserved_files": {
+      "manifest.json": "0b1f18bb84b387787dee245b3c02490f213a1b34d0328681edb9022f9fc78b6d",
+      "source_rows.csv": "ce7e573f940712d256cb82f258ab8c94d819031ec3b0598048c626f42ef204cd",
+      "rebuild-metadata.json": "01bbb7902be7d2cbd683e228ed1273de9b9f6493cdff2f9add0d94fee5349153"
+    },
+    "script_sha256": "4bcc628b414f1b9edba5c9eb910afc38d827aea4547254173e9c1ba800e9f557",
+    "original_packaging_dates_restored": true,
+    "work_time": "This receipt timestamp is the actual rebuild time"
+  },
+  "preserved_evidence_before": {
+    "manifest.json": "0b1f18bb84b387787dee245b3c02490f213a1b34d0328681edb9022f9fc78b6d",
+    "rebuild-metadata.json": "01bbb7902be7d2cbd683e228ed1273de9b9f6493cdff2f9add0d94fee5349153",
+    "source_rows.csv": "ce7e573f940712d256cb82f258ab8c94d819031ec3b0598048c626f42ef204cd"
+  },
+  "preserved_evidence_after": {
+    "manifest.json": "0b1f18bb84b387787dee245b3c02490f213a1b34d0328681edb9022f9fc78b6d",
+    "rebuild-metadata.json": "01bbb7902be7d2cbd683e228ed1273de9b9f6493cdff2f9add0d94fee5349153",
+    "source_rows.csv": "ce7e573f940712d256cb82f258ab8c94d819031ec3b0598048c626f42ef204cd"
+  },
+  "rebuild_exit_code": 0,
+  "existing_sample_second_call": {
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"E:\\佘逍遥的大学_大二\\PythonCoding\\大作业\\_setup_staging\\sample_rebuild_fresh_checkout\\scripts\\build_performance_sample.py\", line 113, in <module>\n    build_sample()\n  File \"E:\\佘逍遥的大学_大二\\PythonCoding\\大作业\\_setup_staging\\sample_rebuild_fresh_checkout\\scripts\\build_performance_sample.py\", line 26, in build_sample\n    raise ValueError('固定样本已存在；先核验，不覆盖或重新选样。')\nValueError: 固定样本已存在；先核验，不覆盖或重新选样。\n"
+  },
+  "real_project_original_sample_preserved": true
+}

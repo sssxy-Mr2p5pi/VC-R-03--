@@ -1,0 +1,62 @@
+[
+  {
+    "case": "bool_then_number",
+    "summary": {
+      "raw_rows": 2,
+      "retained_rows": 1,
+      "excluded_rows": 1,
+      "quality_rows": 0,
+      "invoice_version_conflicts": []
+    },
+    "rows": [
+      {
+        "sheet": "Year 2009-2010",
+        "disposition": "EXCLUDED",
+        "quantity": null,
+        "exclusion_primary": "CROSS_SHEET_DUPLICATE",
+        "primary_reason": "QUANTITY_INVALID_OR_SIGN",
+        "candidate_comparable": 0,
+        "quality_tags": "[{\"field\":\"Quantity\",\"code\":\"NUMERIC_TYPE_INVALID\"}]"
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "disposition": "RETAINED",
+        "quantity": 1,
+        "exclusion_primary": null,
+        "primary_reason": null,
+        "candidate_comparable": 1,
+        "quality_tags": "[]"
+      }
+    ]
+  },
+  {
+    "case": "number_then_bool",
+    "summary": {
+      "raw_rows": 2,
+      "retained_rows": 1,
+      "excluded_rows": 1,
+      "quality_rows": 1,
+      "invoice_version_conflicts": []
+    },
+    "rows": [
+      {
+        "sheet": "Year 2009-2010",
+        "disposition": "EXCLUDED",
+        "quantity": 1,
+        "exclusion_primary": "CROSS_SHEET_DUPLICATE",
+        "primary_reason": null,
+        "candidate_comparable": 1,
+        "quality_tags": "[]"
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "disposition": "RETAINED",
+        "quantity": null,
+        "exclusion_primary": null,
+        "primary_reason": "QUANTITY_INVALID_OR_SIGN",
+        "candidate_comparable": 0,
+        "quality_tags": "[{\"field\":\"Quantity\",\"code\":\"NUMERIC_TYPE_INVALID\"}]"
+      }
+    ]
+  }
+]

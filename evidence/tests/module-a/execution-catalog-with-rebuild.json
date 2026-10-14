@@ -1,0 +1,18 @@
+{
+  "total_pytest_cases": 49,
+  "A_business_and_input_cases": 42,
+  "sample_rebuild_technical_cases": 7,
+  "technical_case_names": [
+    "test_rebuild_archive_byte_identity_and_original_preserved",
+    "test_rebuild_changed_payload_rejected_before_publish",
+    "test_rebuild_wrong_whole_archive_hash_no_publish",
+    "test_rebuild_existing_output_preserved",
+    "test_rebuild_source_or_mapping_hash_rejected[source_sha256-\\u6e90\\u54c8\\u5e0c\\u4e0d\\u4e00\\u81f4]",
+    "test_rebuild_source_or_mapping_hash_rejected[mapping_sha256-\\u6765\\u6e90\\u6620\\u5c04\\u54c8\\u5e0c\\u4e0d\\u4e00\\u81f4]",
+    "test_rebuild_missing_metadata_refuses_reselection"
+  ],
+  "failures": 0,
+  "separate_counting": "Original A catalog unchanged; technical cases not added to course business count",
+  "source": "pytest-with-rebuild.xml; independent-with-rebuild.xml",
+  "scope": "A plus fixed sample preparation; B/C and NFR not executed"
+}

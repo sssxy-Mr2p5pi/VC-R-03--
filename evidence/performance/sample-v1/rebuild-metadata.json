@@ -1,0 +1,219 @@
+{
+  "captured_at": "2026-10-15T01:07:06.677646+08:00",
+  "sample_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+  "purpose": "Original packaging only; rebuild execution time is recorded separately",
+  "core_xml": "<cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2006/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><dc:creator>openpyxl</dc:creator><dcterms:created xsi:type=\"dcterms:W3CDTF\">2026-10-14T16:06:34Z</dcterms:created><dcterms:modified xsi:type=\"dcterms:W3CDTF\">2026-10-14T16:06:34Z</dcterms:modified></cp:coreProperties>",
+  "archive_comment": "",
+  "members": [
+    {
+      "name": "docProps/app.xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "209fca6b00afe72a5029754b94be5953d8f16d96f67130325566b9366ad4ccc5"
+    },
+    {
+      "name": "docProps/core.xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "c8c920e5b264d7c301070e93e534a4d057f4cd82cf53b75f67abc940bed5d199"
+    },
+    {
+      "name": "xl/theme/theme1.xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "d15e8ebf78ef7b9720839d7ae8fdc81a7df5bc24706d8e137df61a5683c358d9"
+    },
+    {
+      "name": "xl/worksheets/sheet1.xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 2176188416,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "6cb84c33f3c9150751e4b565eeb03aa46799b2a581e91d6198b053def97c47ec"
+    },
+    {
+      "name": "xl/worksheets/sheet2.xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 2176188416,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "80dd58e9d80f8abf18a63dac420dc060a9a1a1b8c22b034844333d9b297e128f"
+    },
+    {
+      "name": "xl/styles.xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "32073ae5d74ecbbb229061f0f10d9fb5c3829efaf36248a1359dc2570e6ad71b"
+    },
+    {
+      "name": "_rels/.rels",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "ec869ae44fc833c25e58afa6ae766147aa72a99147522f6070e511475222827d"
+    },
+    {
+      "name": "xl/workbook.xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "74bc2d4abd7798f09283d33109714756e63ea78f8284193fa0ed80c591061487"
+    },
+    {
+      "name": "xl/_rels/workbook.xml.rels",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "15586b8b5fa62b6cbe80c791dc12827c15c2c511f84901daf48e025d77259225"
+    },
+    {
+      "name": "[Content_Types].xml",
+      "date_time": [
+        2026,
+        10,
+        15,
+        0,
+        6,
+        34
+      ],
+      "compress_type": 8,
+      "external_attr": 25165824,
+      "create_system": 0,
+      "create_version": 20,
+      "extract_version": 20,
+      "flag_bits": 0,
+      "internal_attr": 0,
+      "extra": "",
+      "comment": "",
+      "sha256": "8b17c67fc07ed1bc8cddabf0c66e4fb2195cfdb89689998adc2dccbaca1fb71b"
+    }
+  ]
+}

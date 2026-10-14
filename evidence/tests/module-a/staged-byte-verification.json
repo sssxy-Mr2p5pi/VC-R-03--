@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-15T01:15:04.863575+08:00",
+  "scope": "Git staged blobs prior to task commit; byte restore checks",
+  "baseline": "2026-10-15.3",
+  "frozen_files": {
+    "要做什么.md": "97ddd890833f4d7361f540cdd72be2dbc4754deaaceefa62fb6759a0ad972d03",
+    "怎么做.md": "d93582a436af4b3f880efcf7cb0e5c1ab6683e22b3162863c0afb5ce3babcb9f",
+    "怎么算做对.md": "b9c0a1d4a39f5a7536b6ed067b05e60db00da07d03bb220ce28d2f0f4b02e5b0",
+    "决定记录.md": "5bacd364c1ce8ed282fa942406b47eabfd7115ed2f2dacf89480652c5578a92c",
+    "待确认事项.md": "0e986bc551afbc84ec6f37dc782b86b4ddf2d61f29cacd0b14299cf533c87054",
+    "选题自查表.md": "5ce1d09bd0d449fa819e7789dd620cecadb587df27d5b9ac3174c6553facdb48",
+    "AGENTS.md": "d7fe610eed4afc4441f71b930c9d1dedb37d8ee99b97c00071f341425e9d36b3",
+    "CLAUDE.md": "89dcb15460854d9d99b3f957c64c681f05a250ccd0099f23eb62743039005e6e"
+  },
+  "fixed_mapping_sha256": "ce7e573f940712d256cb82f258ab8c94d819031ec3b0598048c626f42ef204cd",
+  "status": "8 frozen blobs equal baseline; fixed CSV matches original manifest; staged whitespace check passed",
+  "not_covered": "No claim of fresh-machine Python install, visual screenshot or full B/C/NFR validation"
+}

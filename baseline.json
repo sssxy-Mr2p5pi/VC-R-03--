@@ -1,16 +1,16 @@
 {
-  "baseline_version": "2026-10-14.3",
-  "updated_at": "2026-10-14T23:10:44+08:00",
-  "current_decisions": "D-18..D-32",
+  "baseline_version": "2026-10-15.3",
+  "updated_at": "2026-10-15T01:03:58+08:00",
+  "current_decisions": "D-18..D-37",
   "files": {
-    "要做什么.md": "212de65fdd138f9c42000be005b42554c0e67d0ece8c979d08bd44f6dbfa99a2",
-    "怎么做.md": "03a1e24774cd5c20614f8ef7dc19a669e7e548b0433b433b6d12a754e613a7f5",
-    "怎么算做对.md": "79239f9a4f9ef4075d9209a1a5c893b2fa729ba8a5eb02669ef67f2726c0fe2a",
-    "决定记录.md": "1488bb292827fc7477a246c59f1074a36bb7d725b5872db188f52120821d256c",
-    "待确认事项.md": "7644ac15909a7e17d0c32aae7765ca5adaf0900119577d82e2208c47a1126f84",
-    "选题自查表.md": "0966251d37b62697801df1963fa902dba3dc3e6834b7e6ff01e8aa9dd54866cf",
-    "AGENTS.md": "8bb5a374d861540f0f31e09f195a6f585f87714671a1240fac55215f749b6a11",
-    "CLAUDE.md": "62cfc47af76e66b5bbe73e19ea10138832dfa76917ac6b47ea9b3dbd6f97ab83"
+    "要做什么.md": "97ddd890833f4d7361f540cdd72be2dbc4754deaaceefa62fb6759a0ad972d03",
+    "怎么做.md": "d93582a436af4b3f880efcf7cb0e5c1ab6683e22b3162863c0afb5ce3babcb9f",
+    "怎么算做对.md": "b9c0a1d4a39f5a7536b6ed067b05e60db00da07d03bb220ce28d2f0f4b02e5b0",
+    "决定记录.md": "5bacd364c1ce8ed282fa942406b47eabfd7115ed2f2dacf89480652c5578a92c",
+    "待确认事项.md": "0e986bc551afbc84ec6f37dc782b86b4ddf2d61f29cacd0b14299cf533c87054",
+    "选题自查表.md": "5ce1d09bd0d449fa819e7789dd620cecadb587df27d5b9ac3174c6553facdb48",
+    "AGENTS.md": "d7fe610eed4afc4441f71b930c9d1dedb37d8ee99b97c00071f341425e9d36b3",
+    "CLAUDE.md": "89dcb15460854d9d99b3f957c64c681f05a250ccd0099f23eb62743039005e6e"
   },
   "history": [
     {
@@ -38,6 +38,65 @@
         "怎么算做对.md",
         "待确认事项.md",
         "选题自查表.md"
+      ]
+    },
+    {
+      "version": "2026-10-14.4",
+      "date": "2026-10-14T23:47:35+08:00",
+      "note": "D-33/D-34：固定性能协议与起点，模块A含对应测试及两入口共享服务",
+      "changed": [
+        "要做什么.md",
+        "怎么做.md",
+        "怎么算做对.md",
+        "决定记录.md",
+        "待确认事项.md",
+        "选题自查表.md",
+        "AGENTS.md",
+        "CLAUDE.md"
+      ]
+    },
+    {
+      "version": "2026-10-15",
+      "date": "2026-10-15T00:38:26+08:00",
+      "note": "D-35：三键预检与类型比较、客户商品键例外、文本错误末级归置",
+      "changed": [
+        "要做什么.md",
+        "怎么做.md",
+        "怎么算做对.md",
+        "决定记录.md",
+        "待确认事项.md",
+        "AGENTS.md",
+        "CLAUDE.md"
+      ]
+    },
+    {
+      "version": "2026-10-15.2",
+      "date": "2026-10-15T00:58:54+08:00",
+      "note": "D-36：固定性能样本及模块A实际交付、42项测试/独立复验和状态同步",
+      "changed": [
+        "要做什么.md",
+        "怎么做.md",
+        "怎么算做对.md",
+        "决定记录.md",
+        "待确认事项.md",
+        "选题自查表.md",
+        "AGENTS.md",
+        "CLAUDE.md"
+      ]
+    },
+    {
+      "version": "2026-10-15.3",
+      "date": "2026-10-15T01:03:58+08:00",
+      "note": "D-37：用户确认固定性能样本受限重建及工具反例边界",
+      "changed": [
+        "要做什么.md",
+        "怎么做.md",
+        "怎么算做对.md",
+        "决定记录.md",
+        "待确认事项.md",
+        "选题自查表.md",
+        "AGENTS.md",
+        "CLAUDE.md"
       ]
     }
   ]

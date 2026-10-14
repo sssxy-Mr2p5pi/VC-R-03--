@@ -10,3 +10,5 @@
 *.zip -text
 *.png -text
 *.jpg -text
+# Fixed sample provenance checksum requires unchanged CSV bytes
+evidence/performance/sample-v1/source_rows.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,9 @@
+{
+  "old_source_and_analysis_unchanged": true,
+  "snapshot_count": 2,
+  "active_new_snapshot": true,
+  "api_reads_active_snapshot": true,
+  "historical_reactivation_rejected": "RULE_CHANGE_REQUIRES_APPROVAL：不能自动激活历史规则快照。",
+  "changed_refresh_rejected": "RULE_RESULTS_CHANGED_REQUIRES_CONFIRMATION：2行输出变化，新旧行数2/2；新分析已回滚。",
+  "after_rejection_history_and_active_unchanged": true
+}

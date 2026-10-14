@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-15T00:14:48.163298+08:00",
+  "scope": "Actual running HTTP endpoints; no visual or human screenshot verification",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 6049
+    },
+    {
+      "path": "/api/summary",
+      "status": 200,
+      "bytes": 8935
+    },
+    {
+      "path": "/lines?view=quality",
+      "status": 200,
+      "bytes": 16268
+    },
+    {
+      "path": "/lines?view=excluded",
+      "status": 200,
+      "bytes": 16663
+    },
+    {
+      "path": "/line/1",
+      "status": 200,
+      "bytes": 2311
+    },
+    {
+      "path": "/?source=performance",
+      "status": 200,
+      "bytes": 1984
+    }
+  ],
+  "browser_control": "IAB unavailable; Chrome control returned fetch request failed"
+}

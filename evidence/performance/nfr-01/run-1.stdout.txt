@@ -1,0 +1,264 @@
+{
+  "import": {
+    "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+    "snapshot_id": "e8402751fc97c3cdeac9cafbb6fd0566301132e9068adbc967cc8b8b4a47a071",
+    "reused": false,
+    "elapsed_seconds": 1.2242701999930432,
+    "summary": {
+      "raw_rows": 10000,
+      "retained_rows": 9939,
+      "excluded_rows": 61,
+      "r1_valid": true,
+      "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+      "source_unchanged": true,
+      "side_counts": {
+        "CANCEL": 260,
+        "SALE": 9679
+      },
+      "exclusion_primary_counts": {
+        "NON_C_NEGATIVE_QUANTITY": 61
+      },
+      "exclusion_union": {
+        "duplicate": 0,
+        "negative": 61,
+        "overlap": 0
+      },
+      "quality_rows": 2067,
+      "nonproduct_rows": 89,
+      "nonproduct": [
+        {
+          "code": "AMAZONFEE",
+          "name": "AMAZONFEE",
+          "category": "其他已识别非商品",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 2,
+          "sale": 1,
+          "cancel": 1,
+          "amount": "0.00",
+          "invalid_amount_rows": 0
+        },
+        {
+          "code": "BANK CHARGES",
+          "name": "手续费",
+          "category": "其他已识别非商品",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 1,
+          "sale": 0,
+          "cancel": 1,
+          "amount": "-39.24",
+          "invalid_amount_rows": 0
+        },
+        {
+          "code": "C2",
+          "name": "运费",
+          "category": "运费",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 4,
+          "sale": 4,
+          "cancel": 0,
+          "amount": "200",
+          "invalid_amount_rows": 0
+        },
+        {
+          "code": "D",
+          "name": "折扣",
+          "category": "优惠抵扣",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 1,
+          "sale": 0,
+          "cancel": 1,
+          "amount": "-162.24",
+          "invalid_amount_rows": 0
+        },
+        {
+          "code": "DOT",
+          "name": "网站邮费",
+          "category": "运费",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 15,
+          "sale": 15,
+          "cancel": 0,
+          "amount": "2711.38",
+          "invalid_amount_rows": 0
+        },
+        {
+          "code": "M",
+          "name": "人工录入",
+          "category": "其他已识别非商品",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 35,
+          "sale": 19,
+          "cancel": 16,
+          "amount": "-2718.99",
+          "invalid_amount_rows": 0
+        },
+        {
+          "code": "POST",
+          "name": "邮费",
+          "category": "运费",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 27,
+          "sale": 19,
+          "cancel": 8,
+          "amount": "1496.10",
+          "invalid_amount_rows": 0
+        },
+        {
+          "code": "S",
+          "name": "样品",
+          "category": "其他已识别非商品",
+          "source": "课程题面口径说明非商品段及DP-06",
+          "maintainer": "项目学生",
+          "confirmed_on": "2026-10-14",
+          "count": 4,
+          "sale": 0,
+          "cancel": 4,
+          "amount": "-1129.33",
+          "invalid_amount_rows": 0
+        }
+      ],
+      "key_merge_groups": 18,
+      "suspicious_key_groups": 0,
+      "invoice_version_conflicts": [],
+      "invoice_type_conflicts": [],
+      "dictionary_version": "nonproduct-v1",
+      "dictionary_hash": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+      "normalization_version": "nfkc-trim-uppercase-u15-v1",
+      "read_version": "openpyxl-3.1.5-decimal-str-v1",
+      "scope": "module A import and quality only; no matching, ticket, allocation or NFR acceptance"
+    }
+  },
+  "matching": {
+    "match_id": "4c51aff97bb855e7a1b4fc252d3c919252a3b92c638a65a2d51b79e66b063df8",
+    "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+    "snapshot_id": "e8402751fc97c3cdeac9cafbb6fd0566301132e9068adbc967cc8b8b4a47a071",
+    "rule_version": "matching-d38-v1",
+    "status": "ACTIVE",
+    "reused": false,
+    "summary": {
+      "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+      "row_classes": {
+        "SUSPECTED": 13,
+        "NO_ORIGINAL": 183,
+        "MATCHED_AUTO": 33
+      },
+      "invoice_classes": {
+        "NO_ORIGINAL": 89,
+        "NONPRODUCT_ONLY": 21,
+        "MATCHED_AUTO": 8,
+        "SUSPECTED": 3
+      },
+      "primary_reasons": {
+        "PRICE_DIFFERENCE": 8,
+        "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+        "MATCHED_AUTO": 33,
+        "ONLY_LATER_SALES": 9,
+        "MISSING_CUSTOMER": 2,
+        "MULTIPLE_CANDIDATES": 5
+      },
+      "reason_tags_nonexclusive": {
+        "PRICE_DIFFERENCE": 8,
+        "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+        "ONLY_LATER_SALES": 9,
+        "KEY_MISSING": 2,
+        "MULTIPLE_CANDIDATES": 5,
+        "COMBINATION_POSSIBLE_NOT_PROVEN": 1,
+        "SINGLE_RETURN_EXCEEDS_ORIGINAL": 1,
+        "CUMULATIVE_OVER_QUOTA": 1
+      },
+      "commodity_cancellations": 229,
+      "candidate_links": 51,
+      "unique_candidate_rows": 41,
+      "over_quota_originals": 1,
+      "ticket_count": 92,
+      "ticket_types": {
+        "MATCHING_DISCREPANCY": 91,
+        "DATA_QUALITY": 1
+      },
+      "ticket_commodity_lines": 207,
+      "automatic_invoice_commodity_lines": 22,
+      "source_quality_rows": 2067,
+      "cancellations_affected_by_candidate_quality": 0,
+      "own_cancellation_quality_rows": 2,
+      "amount_incomplete_invoices": 0,
+      "balances": [
+        {
+          "name": "file_rows",
+          "left": 10000,
+          "right": 10000,
+          "valid": true
+        },
+        {
+          "name": "retained_sides",
+          "left": 9939,
+          "right": 9939,
+          "valid": true
+        },
+        {
+          "name": "cancellation_rows",
+          "left": 260,
+          "right": 260,
+          "valid": true
+        },
+        {
+          "name": "commodity_classes",
+          "left": 229,
+          "right": 229,
+          "valid": true
+        },
+        {
+          "name": "invoice_scope",
+          "left": 121,
+          "right": 121,
+          "valid": true
+        },
+        {
+          "name": "commodity_invoice_classes",
+          "left": 100,
+          "right": 100,
+          "valid": true
+        },
+        {
+          "name": "invoice_partition",
+          "left": 121,
+          "right": 121,
+          "valid": true
+        },
+        {
+          "name": "commodity_details",
+          "left": 229,
+          "right": 229,
+          "valid": true
+        },
+        {
+          "name": "nonproduct_sources",
+          "left": 31,
+          "right": 31,
+          "valid": true
+        },
+        {
+          "name": "exclusive_reasons",
+          "left": 229,
+          "right": 229,
+          "valid": true
+        }
+      ]
+    },
+    "elapsed_seconds": 0.06292050000047311
+  },
+  "elapsed_seconds": 1.2983024999994086
+}

@@ -52,6 +52,7 @@ def main():
     hardware = subprocess.run(['powershell','-NoProfile','-Command',
                               '@{cpu=(Get-CimInstance Win32_Processor).Name;ram_bytes=(Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory}|ConvertTo-Json -Compress'],
                              capture_output=True,text=True,encoding='utf-8',check=False)
+    working = subprocess.run(['git','status','--porcelain'],cwd=ROOT,capture_output=True,text=True,encoding='utf-8',check=False)
     report = {'measured_at':datetime.now(timezone(timedelta(hours=8))).isoformat(),
               'scope':'NFR-01 fixed sample: open/hash -> A -> B -> allocations/initial tickets/commit -> persisted query',
               'cache':'Normal OS cache; fresh process and empty database each run',
@@ -60,7 +61,8 @@ def main():
               'packages':{n:importlib.metadata.version(n) for n in ('Flask','openpyxl','pytest')},
               'baseline':json.loads((ROOT/'baseline.json').read_text(encoding='utf-8'))['baseline_version'],
               'git_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
-              'working_tree':'Measured before delivery commit; exact code hashes preserved',
+              'working_tree':'git status --porcelain recorded at run time; exact code hashes in code_sha256',
+              'working_tree_status':working.stdout.splitlines() if working.returncode==0 else ['git status unavailable'],
               'code_sha256':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)},
               'runs':runs,'same_outputs':same,'max_seconds':max(times) if times else None,
               'median_seconds':statistics.median(times) if times else None,'passed':passed}

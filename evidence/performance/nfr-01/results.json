@@ -1,0 +1,722 @@
+{
+  "measured_at": "2026-10-16T22:03:01.586795+08:00",
+  "scope": "NFR-01 fixed sample: open/hash -> A -> B -> allocations/initial tickets/commit -> persisted query",
+  "cache": "Normal OS cache; fresh process and empty database each run",
+  "sample_manifest": {
+    "prepared_at": "2026-10-15T00:06:35.582152+08:00",
+    "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+    "sample": "data/processed/performance-10000.xlsx",
+    "sample_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+    "mapping": "evidence/performance/sample-v1/source_rows.csv",
+    "mapping_sha256": "ce7e573f940712d256cb82f258ab8c94d819031ec3b0598048c626f42ef204cd",
+    "script_sha256": "a31f3cf687e1ece836e2e99b9382ac790ef73492fc2480b431154952073eab3e",
+    "rules": "D-33; whole-invoice greedy; raw rows included before exclusions; fixed starts; no outcome filtering",
+    "worksheets": [
+      {
+        "sheet": "Year 2009-2010",
+        "threshold_excel_row": 131367,
+        "first_excel_row": 131393,
+        "last_excel_row": 137162,
+        "rows": 5000,
+        "invoices": 332,
+        "whole_invoices_verified": true
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "threshold_excel_row": 135479,
+        "first_excel_row": 135487,
+        "last_excel_row": 140557,
+        "rows": 5000,
+        "invoices": 290,
+        "whole_invoices_verified": true
+      }
+    ],
+    "rows": 10000,
+    "read_values_and_types_verified": true,
+    "source_unchanged": true,
+    "performance_acceptance": "not executed; A/B/initial-ticket pipeline required"
+  },
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "os": "Windows-11-10.0.26200-SP0",
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) Ultra 7 265H",
+    "ram_bytes": 33777467392
+  },
+  "packages": {
+    "Flask": "3.1.3",
+    "openpyxl": "3.1.5",
+    "pytest": "9.1.1"
+  },
+  "baseline": "2026-10-16",
+  "git_head": "602c37838798004d459ddaa1883e8ebccb24ad13",
+  "working_tree": "git status --porcelain recorded at run time; exact code hashes in code_sha256",
+  "working_tree_status": [
+    " M README.md",
+    " M scripts/measure_pipeline.py",
+    " M src/vcr03/web/templates/index.html",
+    "A  \"每日工作记录/2026-10-14/截图/屏幕截图 2026-10-15 024433.png\"",
+    "A  \"每日工作记录/2026-10-14/截图/屏幕截图 2026-10-15 024621.png\"",
+    "A  \"每日工作记录/2026-10-14/截图/屏幕截图 2026-10-15 024636.png\"",
+    "?? evidence/performance/nfr-01/"
+  ],
+  "code_sha256": {
+    "config\\actors.json": "ba3e20f42cfedbf200b78a86663698d4dc52d54bef52ecf58b85e00663efd0dc",
+    "config\\nonproduct-v1.json": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+    "scripts\\measure_pipeline.py": "2f9c1e0e706d1e4fb7e9e0fd175835fca17960dc43ca88970ca758a779a6105b",
+    "scripts\\reconcile_data.py": "e07312c44fa0a24e4bc0911da7edf2712b265012a12c70dfbf236aa5442125f4",
+    "src\\vcr03\\__init__.py": "e77fce23574892c87e7e4d92cc38e46c99429521ac0f2a8f8d7ec1f43f995297",
+    "src\\vcr03\\__main__.py": "0aea8c68fcfc2342c78e9eab6c592be944f1c2fb6da9f873301b03bc0451813e",
+    "src\\vcr03\\cli.py": "ecc0656da40791270365bedab0219dcf5288d969671759668d16abd65260da92",
+    "src\\vcr03\\ingest\\__init__.py": "1d4ef617e2b1333d53b25dee9f4b5b6a8dadd8c1bce29fa0d3149c74c34bb8e2",
+    "src\\vcr03\\ingest\\dictionary.py": "cbdd03452e9baa9d328c6bfd6bf15800aa38995b27e504c5d227c34d63e80c68",
+    "src\\vcr03\\ingest\\rules.py": "b5d5541acf23b852c118c086cb2fafc5d5cd4bdc5700a2266f0b5334fff24194",
+    "src\\vcr03\\ingest\\service.py": "7e9d7c830c15ad83316376b92b8e500c6ca7e092786c3a8d52a124f9bd4a1e0c",
+    "src\\vcr03\\matching\\__init__.py": "12f61ca1d9d9c2531951905d74468e0a379abc22260e04a11e6392e6f3ea3cf0",
+    "src\\vcr03\\matching\\query.py": "fb8dcc70b6683d4500d1eddb1907bbfd18b1100c6c8cdbc202eef03132bd6a01",
+    "src\\vcr03\\matching\\rules.py": "8b7323ea77f689aa5825a4ff990b97daf02e3ec85016b94179eab3f2964109b7",
+    "src\\vcr03\\matching\\service.py": "8f482f8a6b3d705a44d6730ff6ea7e8fd8fbd539da1448d3a22fc82a21a75db8",
+    "src\\vcr03\\matching\\storage.py": "9ef3a6e65d65836563b93f1f7f1296c8289fc1185a40298faf6bf4f97297f2e4",
+    "src\\vcr03\\storage\\__init__.py": "ba488aea360d397d744d84b3b78bbded8a2ba59ed9fcc7b420bac61289decb5b",
+    "src\\vcr03\\storage\\database.py": "dff22098629fea971b3892fdd532fcc97d4574c2816c61c1a9608d5ce58ddc3d",
+    "src\\vcr03\\web\\__init__.py": "e8f74eb43501eff130f0572e4cccf8a45e112d2d72aeedbdd1da9a17e5735691",
+    "src\\vcr03\\web\\matching.py": "11ae9a4c35722b7078d775347525c744947805e7d02518a7059856d7d38a4c4d",
+    "src\\vcr03\\web\\templates\\base.html": "58cc43bbd062914dc6477576b2c9747166fdf9af1056e6530b84bf8055015609",
+    "src\\vcr03\\web\\templates\\detail.html": "a6f76a07428552e0a289ee17883ccfee4a0c92b1f042b089b1830b5ee129bb4d",
+    "src\\vcr03\\web\\templates\\error.html": "052fd9d1947168c2fdaadc8f5699e7b5b549dc7c7ec7e63886f857edb81b27b6",
+    "src\\vcr03\\web\\templates\\index.html": "f833ce580f31992596ba5e08badbc59a282565a9e68828655f40072e915970a1",
+    "src\\vcr03\\web\\templates\\invoice_detail.html": "04c3137a2ed90a3c651dd9e8fda002c18e032c1169e5d1fa9820e9ecf795b464",
+    "src\\vcr03\\web\\templates\\lines.html": "491f4e1d38be65964deaa9c688cd041b9b0b8d62599801a67c11b5a554dc8331",
+    "src\\vcr03\\web\\templates\\match_detail.html": "fc865105703227bfa3bd30e77ba1eb4a71084e1d6ceabcb96decb0c206b19fc0",
+    "src\\vcr03\\web\\templates\\matches.html": "7d8343e55b80990a20fceac951d9701f6997894cbd3bd9bdc4772770646587ac",
+    "src\\vcr03\\web\\templates\\metrics.html": "f65cf02552dadb37e3dc24b75eb0471eae2a55a3f1b57afb26dc56f19f0ef053",
+    "src\\vcr03\\web\\templates\\ticket_detail.html": "218ce45084645825e53bf99557046d13600e998930e1eef26031c3fa50a97a01",
+    "src\\vcr03\\web\\templates\\tickets.html": "d16d07a4e0c07e20694a92ce4582abefe5c020b0a1c642fecbcc4478e5b34a1f",
+    "src\\vcr03\\web\\workflow.py": "6403a0a2c18ddab1625703f74d8618f4be2bd65851baba7d2d19407d80138b34",
+    "src\\vcr03\\workflow\\__init__.py": "d16fb19d427de5c571a54bf793ec052837e35cab059277a37816876a5da6e498",
+    "src\\vcr03\\workflow\\actors.py": "abfd036717a9244f3b6d063a7d870584cd5c291ef297d8c1746153535ff9d273",
+    "src\\vcr03\\workflow\\allocation.py": "c1d4e4d8bfe47349f11d4af828c08bb9883234da3a6100955d718ecd760c5d1e",
+    "src\\vcr03\\workflow\\query.py": "52206214d9618f637517cb0278fa19494107365ec12245c4f1ac6d86d6cfc1d8",
+    "src\\vcr03\\workflow\\service.py": "464f13bf22ae083dd0e116124d4a3b9131325fbdcb1e5ecc21d85a2dd16d49a9",
+    "src\\vcr03\\workflow\\storage.py": "c066c6b38992ba0910a9e2a0b5e8666ae4efae171e7d88d9dda0029ac0e2cb92",
+    "tests\\conftest.py": "8293def3dc0e5407a53e6606dfe3450a0e70941800bc28cba39a4b85c2b06e70",
+    "tests\\test_ab_binding.py": "9eba533208b5ce316567f10f81062969953560ae089fae8226b88d5d7fafe1d6",
+    "tests\\test_module_a.py": "3552824204ed5a478c690afcfdd9e11eb7f11ac5f66bc61bb6ac4e56033116df",
+    "tests\\test_module_b.py": "0134592312ad02f1b9d9e279dc1480cc3bf148fc8efa25e24206633045a651f5",
+    "tests\\test_module_c_backend.py": "8945eaca23d3ae2221a7b117f978926bfe5f34cc96283387b2ee59de8c994064",
+    "tests\\test_module_c_web.py": "b21ca07a0c9b36184393cd997f63cd8f3c09019efe645e59862b617e32dea2aa",
+    "tests\\test_reason_category_filter.py": "925abe71d672d0723740c3b5a609bca4137d3929a1f4dc6118c773c5da03308a",
+    "tests\\test_sample_rebuild.py": "3382e4d24e602949a1158097ae39aeece48adfe02d58cc7f8cd77227dfe34021"
+  },
+  "runs": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "elapsed_seconds": 1.2983024999994086,
+      "a_seconds": 1.2242701999930432,
+      "b_seconds": 0.06292050000047311,
+      "matching_summary": {
+        "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+        "row_classes": {
+          "SUSPECTED": 13,
+          "NO_ORIGINAL": 183,
+          "MATCHED_AUTO": 33
+        },
+        "invoice_classes": {
+          "NO_ORIGINAL": 89,
+          "NONPRODUCT_ONLY": 21,
+          "MATCHED_AUTO": 8,
+          "SUSPECTED": 3
+        },
+        "primary_reasons": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "MATCHED_AUTO": 33,
+          "ONLY_LATER_SALES": 9,
+          "MISSING_CUSTOMER": 2,
+          "MULTIPLE_CANDIDATES": 5
+        },
+        "reason_tags_nonexclusive": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "ONLY_LATER_SALES": 9,
+          "KEY_MISSING": 2,
+          "MULTIPLE_CANDIDATES": 5,
+          "COMBINATION_POSSIBLE_NOT_PROVEN": 1,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 1,
+          "CUMULATIVE_OVER_QUOTA": 1
+        },
+        "commodity_cancellations": 229,
+        "candidate_links": 51,
+        "unique_candidate_rows": 41,
+        "over_quota_originals": 1,
+        "ticket_count": 92,
+        "ticket_types": {
+          "MATCHING_DISCREPANCY": 91,
+          "DATA_QUALITY": 1
+        },
+        "ticket_commodity_lines": 207,
+        "automatic_invoice_commodity_lines": 22,
+        "source_quality_rows": 2067,
+        "cancellations_affected_by_candidate_quality": 0,
+        "own_cancellation_quality_rows": 2,
+        "amount_incomplete_invoices": 0,
+        "balances": [
+          {
+            "name": "file_rows",
+            "left": 10000,
+            "right": 10000,
+            "valid": true
+          },
+          {
+            "name": "retained_sides",
+            "left": 9939,
+            "right": 9939,
+            "valid": true
+          },
+          {
+            "name": "cancellation_rows",
+            "left": 260,
+            "right": 260,
+            "valid": true
+          },
+          {
+            "name": "commodity_classes",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "invoice_scope",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_invoice_classes",
+            "left": 100,
+            "right": 100,
+            "valid": true
+          },
+          {
+            "name": "invoice_partition",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_details",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "nonproduct_sources",
+            "left": 31,
+            "right": 31,
+            "valid": true
+          },
+          {
+            "name": "exclusive_reasons",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          }
+        ]
+      },
+      "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+      "raw_rows": 10000,
+      "reused": false,
+      "status": "ACTIVE",
+      "output_valid": true
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "elapsed_seconds": 1.2967579000105616,
+      "a_seconds": 1.2208019999961834,
+      "b_seconds": 0.06432700000004843,
+      "matching_summary": {
+        "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+        "row_classes": {
+          "SUSPECTED": 13,
+          "NO_ORIGINAL": 183,
+          "MATCHED_AUTO": 33
+        },
+        "invoice_classes": {
+          "NO_ORIGINAL": 89,
+          "NONPRODUCT_ONLY": 21,
+          "MATCHED_AUTO": 8,
+          "SUSPECTED": 3
+        },
+        "primary_reasons": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "MATCHED_AUTO": 33,
+          "ONLY_LATER_SALES": 9,
+          "MISSING_CUSTOMER": 2,
+          "MULTIPLE_CANDIDATES": 5
+        },
+        "reason_tags_nonexclusive": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "ONLY_LATER_SALES": 9,
+          "KEY_MISSING": 2,
+          "MULTIPLE_CANDIDATES": 5,
+          "COMBINATION_POSSIBLE_NOT_PROVEN": 1,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 1,
+          "CUMULATIVE_OVER_QUOTA": 1
+        },
+        "commodity_cancellations": 229,
+        "candidate_links": 51,
+        "unique_candidate_rows": 41,
+        "over_quota_originals": 1,
+        "ticket_count": 92,
+        "ticket_types": {
+          "MATCHING_DISCREPANCY": 91,
+          "DATA_QUALITY": 1
+        },
+        "ticket_commodity_lines": 207,
+        "automatic_invoice_commodity_lines": 22,
+        "source_quality_rows": 2067,
+        "cancellations_affected_by_candidate_quality": 0,
+        "own_cancellation_quality_rows": 2,
+        "amount_incomplete_invoices": 0,
+        "balances": [
+          {
+            "name": "file_rows",
+            "left": 10000,
+            "right": 10000,
+            "valid": true
+          },
+          {
+            "name": "retained_sides",
+            "left": 9939,
+            "right": 9939,
+            "valid": true
+          },
+          {
+            "name": "cancellation_rows",
+            "left": 260,
+            "right": 260,
+            "valid": true
+          },
+          {
+            "name": "commodity_classes",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "invoice_scope",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_invoice_classes",
+            "left": 100,
+            "right": 100,
+            "valid": true
+          },
+          {
+            "name": "invoice_partition",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_details",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "nonproduct_sources",
+            "left": 31,
+            "right": 31,
+            "valid": true
+          },
+          {
+            "name": "exclusive_reasons",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          }
+        ]
+      },
+      "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+      "raw_rows": 10000,
+      "reused": false,
+      "status": "ACTIVE",
+      "output_valid": true
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "elapsed_seconds": 1.3190265000012005,
+      "a_seconds": 1.2441013999923598,
+      "b_seconds": 0.06362159999844152,
+      "matching_summary": {
+        "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+        "row_classes": {
+          "SUSPECTED": 13,
+          "NO_ORIGINAL": 183,
+          "MATCHED_AUTO": 33
+        },
+        "invoice_classes": {
+          "NO_ORIGINAL": 89,
+          "NONPRODUCT_ONLY": 21,
+          "MATCHED_AUTO": 8,
+          "SUSPECTED": 3
+        },
+        "primary_reasons": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "MATCHED_AUTO": 33,
+          "ONLY_LATER_SALES": 9,
+          "MISSING_CUSTOMER": 2,
+          "MULTIPLE_CANDIDATES": 5
+        },
+        "reason_tags_nonexclusive": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "ONLY_LATER_SALES": 9,
+          "KEY_MISSING": 2,
+          "MULTIPLE_CANDIDATES": 5,
+          "COMBINATION_POSSIBLE_NOT_PROVEN": 1,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 1,
+          "CUMULATIVE_OVER_QUOTA": 1
+        },
+        "commodity_cancellations": 229,
+        "candidate_links": 51,
+        "unique_candidate_rows": 41,
+        "over_quota_originals": 1,
+        "ticket_count": 92,
+        "ticket_types": {
+          "MATCHING_DISCREPANCY": 91,
+          "DATA_QUALITY": 1
+        },
+        "ticket_commodity_lines": 207,
+        "automatic_invoice_commodity_lines": 22,
+        "source_quality_rows": 2067,
+        "cancellations_affected_by_candidate_quality": 0,
+        "own_cancellation_quality_rows": 2,
+        "amount_incomplete_invoices": 0,
+        "balances": [
+          {
+            "name": "file_rows",
+            "left": 10000,
+            "right": 10000,
+            "valid": true
+          },
+          {
+            "name": "retained_sides",
+            "left": 9939,
+            "right": 9939,
+            "valid": true
+          },
+          {
+            "name": "cancellation_rows",
+            "left": 260,
+            "right": 260,
+            "valid": true
+          },
+          {
+            "name": "commodity_classes",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "invoice_scope",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_invoice_classes",
+            "left": 100,
+            "right": 100,
+            "valid": true
+          },
+          {
+            "name": "invoice_partition",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_details",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "nonproduct_sources",
+            "left": 31,
+            "right": 31,
+            "valid": true
+          },
+          {
+            "name": "exclusive_reasons",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          }
+        ]
+      },
+      "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+      "raw_rows": 10000,
+      "reused": false,
+      "status": "ACTIVE",
+      "output_valid": true
+    },
+    {
+      "run": 4,
+      "exit_code": 0,
+      "elapsed_seconds": 1.330401899991557,
+      "a_seconds": 1.2571686000010232,
+      "b_seconds": 0.06159670000488404,
+      "matching_summary": {
+        "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+        "row_classes": {
+          "SUSPECTED": 13,
+          "NO_ORIGINAL": 183,
+          "MATCHED_AUTO": 33
+        },
+        "invoice_classes": {
+          "NO_ORIGINAL": 89,
+          "NONPRODUCT_ONLY": 21,
+          "MATCHED_AUTO": 8,
+          "SUSPECTED": 3
+        },
+        "primary_reasons": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "MATCHED_AUTO": 33,
+          "ONLY_LATER_SALES": 9,
+          "MISSING_CUSTOMER": 2,
+          "MULTIPLE_CANDIDATES": 5
+        },
+        "reason_tags_nonexclusive": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "ONLY_LATER_SALES": 9,
+          "KEY_MISSING": 2,
+          "MULTIPLE_CANDIDATES": 5,
+          "COMBINATION_POSSIBLE_NOT_PROVEN": 1,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 1,
+          "CUMULATIVE_OVER_QUOTA": 1
+        },
+        "commodity_cancellations": 229,
+        "candidate_links": 51,
+        "unique_candidate_rows": 41,
+        "over_quota_originals": 1,
+        "ticket_count": 92,
+        "ticket_types": {
+          "MATCHING_DISCREPANCY": 91,
+          "DATA_QUALITY": 1
+        },
+        "ticket_commodity_lines": 207,
+        "automatic_invoice_commodity_lines": 22,
+        "source_quality_rows": 2067,
+        "cancellations_affected_by_candidate_quality": 0,
+        "own_cancellation_quality_rows": 2,
+        "amount_incomplete_invoices": 0,
+        "balances": [
+          {
+            "name": "file_rows",
+            "left": 10000,
+            "right": 10000,
+            "valid": true
+          },
+          {
+            "name": "retained_sides",
+            "left": 9939,
+            "right": 9939,
+            "valid": true
+          },
+          {
+            "name": "cancellation_rows",
+            "left": 260,
+            "right": 260,
+            "valid": true
+          },
+          {
+            "name": "commodity_classes",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "invoice_scope",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_invoice_classes",
+            "left": 100,
+            "right": 100,
+            "valid": true
+          },
+          {
+            "name": "invoice_partition",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_details",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "nonproduct_sources",
+            "left": 31,
+            "right": 31,
+            "valid": true
+          },
+          {
+            "name": "exclusive_reasons",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          }
+        ]
+      },
+      "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+      "raw_rows": 10000,
+      "reused": false,
+      "status": "ACTIVE",
+      "output_valid": true
+    },
+    {
+      "run": 5,
+      "exit_code": 0,
+      "elapsed_seconds": 1.325011100008851,
+      "a_seconds": 1.2490181000030134,
+      "b_seconds": 0.06408740000915714,
+      "matching_summary": {
+        "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+        "row_classes": {
+          "SUSPECTED": 13,
+          "NO_ORIGINAL": 183,
+          "MATCHED_AUTO": 33
+        },
+        "invoice_classes": {
+          "NO_ORIGINAL": 89,
+          "NONPRODUCT_ONLY": 21,
+          "MATCHED_AUTO": 8,
+          "SUSPECTED": 3
+        },
+        "primary_reasons": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "MATCHED_AUTO": 33,
+          "ONLY_LATER_SALES": 9,
+          "MISSING_CUSTOMER": 2,
+          "MULTIPLE_CANDIDATES": 5
+        },
+        "reason_tags_nonexclusive": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "ONLY_LATER_SALES": 9,
+          "KEY_MISSING": 2,
+          "MULTIPLE_CANDIDATES": 5,
+          "COMBINATION_POSSIBLE_NOT_PROVEN": 1,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 1,
+          "CUMULATIVE_OVER_QUOTA": 1
+        },
+        "commodity_cancellations": 229,
+        "candidate_links": 51,
+        "unique_candidate_rows": 41,
+        "over_quota_originals": 1,
+        "ticket_count": 92,
+        "ticket_types": {
+          "MATCHING_DISCREPANCY": 91,
+          "DATA_QUALITY": 1
+        },
+        "ticket_commodity_lines": 207,
+        "automatic_invoice_commodity_lines": 22,
+        "source_quality_rows": 2067,
+        "cancellations_affected_by_candidate_quality": 0,
+        "own_cancellation_quality_rows": 2,
+        "amount_incomplete_invoices": 0,
+        "balances": [
+          {
+            "name": "file_rows",
+            "left": 10000,
+            "right": 10000,
+            "valid": true
+          },
+          {
+            "name": "retained_sides",
+            "left": 9939,
+            "right": 9939,
+            "valid": true
+          },
+          {
+            "name": "cancellation_rows",
+            "left": 260,
+            "right": 260,
+            "valid": true
+          },
+          {
+            "name": "commodity_classes",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "invoice_scope",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_invoice_classes",
+            "left": 100,
+            "right": 100,
+            "valid": true
+          },
+          {
+            "name": "invoice_partition",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_details",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "nonproduct_sources",
+            "left": 31,
+            "right": 31,
+            "valid": true
+          },
+          {
+            "name": "exclusive_reasons",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          }
+        ]
+      },
+      "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+      "raw_rows": 10000,
+      "reused": false,
+      "status": "ACTIVE",
+      "output_valid": true
+    }
+  ],
+  "same_outputs": true,
+  "max_seconds": 1.330401899991557,
+  "median_seconds": 1.3190265000012005,
+  "passed": true
+}

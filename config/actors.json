@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "fixture": true,
+  "note": "教学夹具：账户、业务角色与管理链均为演示用，不是真实人员或真实授权；P-04 实际账号、权限与管理链待本人配置后替换本文件。",
+  "actors": [
+    {"id": "manager_sun", "name": "孙经理（教学）", "business_role": "MANAGER",
+     "permissions": ["DISPATCH", "REVIEW", "APPROVE_RELEASE", "APPROVE_REVERSAL"], "supervisor": null},
+    {"id": "supervisor_zhao", "name": "赵主管（教学）", "business_role": "SUPERVISOR",
+     "permissions": ["DISPATCH", "REVIEW", "APPROVE_RELEASE", "APPROVE_REVERSAL"], "supervisor": "manager_sun"},
+    {"id": "finance_li", "name": "李财务（教学）", "business_role": "FINANCE",
+     "permissions": [], "supervisor": "supervisor_zhao"},
+    {"id": "finance_chen", "name": "陈财务（教学）", "business_role": "FINANCE",
+     "permissions": ["REVIEW"], "supervisor": "supervisor_zhao"},
+    {"id": "warehouse_wang", "name": "王仓库（教学）", "business_role": "WAREHOUSE",
+     "permissions": [], "supervisor": "supervisor_zhao"},
+    {"id": "warehouse_lead", "name": "仓库组林组长（教学）", "business_role": "WAREHOUSE",
+     "permissions": ["REVIEW"], "supervisor": "manager_sun"}
+  ]
+}

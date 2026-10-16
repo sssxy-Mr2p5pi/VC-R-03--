@@ -7,6 +7,16 @@ from vcr03.storage.database import connect
 from vcr03.workflow.allocation import available
 
 
+REASON_CATEGORIES = ('DATA_QUALITY', 'MATCHING_DISCREPANCY')
+
+
+def check_reason_category(category):
+    """Accept only the empty selection or one fixed reason category."""
+    if category not in ('', *REASON_CATEGORIES):
+        raise ValueError('INVALID_REASON_CATEGORY')
+    return category
+
+
 def current(db):
     if not db.execute("SELECT 1 FROM sqlite_master WHERE name='active_matching'").fetchone():
         return None
@@ -37,7 +47,8 @@ def evidence(db, snapshot, lid):
     return result
 
 
-def results(database, *, page=1, classification='', reason='', limit=50):
+def results(database, *, page=1, classification='', reason='', category='', limit=50):
+    check_reason_category(category)
     with closing(connect(database)) as db:
         match = current(db)
         if not match:
@@ -47,6 +58,9 @@ def results(database, *, page=1, classification='', reason='', limit=50):
             if value:
                 where += f' AND r.{field}=?'
                 args.append(value)
+        if category:
+            where += ' AND EXISTS (SELECT 1 FROM json_each(r.reason_categories) je WHERE je.value=?)'
+            args.append(category)
         total = db.execute('SELECT COUNT(*) FROM match_result r'+where,args).fetchone()[0]
         sql = '''SELECT r.*,a.price,a.quantity,a.stock_key,a.customer_key,a.normalization_version,
                  s.sheet,s.excel_row,s.raw_json,l.allocation_id FROM match_result r
@@ -135,8 +149,9 @@ def invoice_detail(database, invoice):
         return item
 
 
-def export_rows(database, kind, *, classification='', reason='', ticket_type=''):
+def export_rows(database, kind, *, classification='', reason='', category='', ticket_type=''):
     """Streaming rows under one read transaction, including original values and versions."""
+    check_reason_category(category)
     with closing(connect(database)) as db:
         db.execute('BEGIN')
         match = current(db)
@@ -154,6 +169,8 @@ def export_rows(database, kind, *, classification='', reason='', ticket_type='')
             return
         for r in db.execute('SELECT * FROM match_result WHERE match_id=? ORDER BY cancel_line_id',(match['match_id'],)):
             if (classification and r['classification'] != classification) or (reason and r['primary_reason'] != reason):
+                continue
+            if category and category not in json.loads(r['reason_categories']):
                 continue
             source = evidence(db,match['snapshot_id'],r['cancel_line_id'])
             if kind == 'results':

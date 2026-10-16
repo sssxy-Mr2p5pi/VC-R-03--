@@ -29,6 +29,12 @@ def register(app):
         except ValueError:
             abort(400)
 
+    def reason_category():
+        try:
+            return query.check_reason_category(request.args.get('category',''))
+        except ValueError:
+            abort(400)
+
     @app.post('/reconcile')
     def reconcile():
         selected, database = context()
@@ -49,7 +55,8 @@ def register(app):
     def matches():
         selected,database = context()
         overview = query.overview(database)
-        data = query.results(database,page=page(),classification=request.args.get('classification',''),reason=request.args.get('reason','')) if overview else None
+        category = reason_category()
+        data = query.results(database,page=page(),classification=request.args.get('classification',''),reason=request.args.get('reason',''),category=category) if overview else None
         return render_template('matches.html',selected=selected,overview=overview,data=data)
 
     @app.get('/matches/<int:lid>')
@@ -85,11 +92,12 @@ def register(app):
         if kind not in {'results','candidates','tickets'} or not query.overview(database):
             abort(404)
         classification,reason,ticket_type = (request.args.get(k,'') for k in ('classification','reason','ticket_type'))
+        category = reason_category()
         def generate():
             yield '\ufeff'
             output = io.StringIO()
             writer = None
-            for row in query.export_rows(database,kind,classification=classification,reason=reason,ticket_type=ticket_type):
+            for row in query.export_rows(database,kind,classification=classification,reason=reason,category=category,ticket_type=ticket_type):
                 if writer is None:
                     writer = csv.DictWriter(output,fieldnames=list(row))
                     writer.writeheader()

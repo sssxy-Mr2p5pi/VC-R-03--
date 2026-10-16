@@ -36,6 +36,25 @@ def now():
     return datetime.now(timezone(timedelta(hours=8))).isoformat(timespec='seconds')
 
 
+def ab_binding_conflict(db, dataset_id, snapshot_id):
+    """Return the A snapshot id bound to the current ACTIVE B when it differs, else None.
+
+    Pure-A databases have no matching tables (treated as no binding, never an error).
+    A binding whose matching_snapshot is not ACTIVE (e.g. REQUIRES_REVIEW) or a missing
+    active_matching row never conflicts; the same snapshot id passes (idempotent reuse).
+    """
+    tables = {row[0] for row in db.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('active_matching','matching_snapshot')")}
+    if not {'active_matching', 'matching_snapshot'} <= tables:
+        return None
+    bound = db.execute('''SELECT s.snapshot_id,s.status FROM active_matching m
+                          JOIN matching_snapshot s ON s.match_id=m.match_id
+                          WHERE m.dataset_id=?''', (dataset_id,)).fetchone()
+    if not bound or bound['status'] != 'ACTIVE' or bound['snapshot_id'] == snapshot_id:
+        return None
+    return bound['snapshot_id']
+
+
 ANALYSIS_INSERT = '''INSERT INTO line_analysis VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'''
 
 
@@ -88,6 +107,11 @@ def ingest_workbook(source: Path, database: Path, *, dictionary_path=None, progr
             active = db.execute('SELECT snapshot_id FROM active_analysis WHERE dataset_id=?', (dataset,)).fetchone()
             if active and active['snapshot_id'] != snapshot:
                 raise ImportRejected('RULE_CHANGE_REQUIRES_APPROVAL：不能自动激活历史规则快照。')
+            bound = ab_binding_conflict(db, dataset, snapshot)
+            if bound:
+                raise ImportRejected('A_BINDING_CONFLICT_REQUIRES_APPROVAL：'
+                                     f'本次待激活A快照{snapshot}与当前有效B绑定的A快照{bound}不一致，'
+                                     '本次激活已拒绝；既有来源、分析、配对、额度与工单保持。')
             db.execute('INSERT OR IGNORE INTO active_analysis VALUES(?,?)', (dataset, snapshot))
             summary = json.loads(found['summary_json'])
             db.execute('INSERT INTO import_run VALUES(?,?,?,?,?)', (uuid4().hex, snapshot, now(), 1, perf_counter()-started))
@@ -273,6 +297,11 @@ def ingest_workbook(source: Path, database: Path, *, dictionary_path=None, progr
                 raise ImportRejected(f'RULE_RESULTS_CHANGED_REQUIRES_CONFIRMATION：{changed}行输出变化，新旧行数{line_id}/{old_count}；新分析已回滚。')
             summary['approved_refresh'] = {'previous_snapshot_id': previous['snapshot_id'], 'changed_output_rows': 0,
                                            'compared_rows': line_id, 'old_source_and_analysis_preserved': True}
+        bound = ab_binding_conflict(db, dataset, snapshot)
+        if bound:
+            raise ImportRejected('A_BINDING_CONFLICT_REQUIRES_APPROVAL：'
+                                 f'本次待激活A快照{snapshot}与当前有效B绑定的A快照{bound}不一致，'
+                                 '本次激活已拒绝；既有来源、分析、配对、额度与工单保持。')
         db.execute('INSERT INTO active_analysis VALUES(?,?) ON CONFLICT(dataset_id) DO UPDATE SET snapshot_id=excluded.snapshot_id',
                    (dataset, snapshot))
         db.execute("UPDATE analysis_snapshot SET status='A_COMPLETE',summary_json=? WHERE snapshot_id=?", (compact(summary), snapshot))

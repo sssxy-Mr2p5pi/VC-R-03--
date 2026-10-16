@@ -1,0 +1,22 @@
+name: sol-develop
+description: One approved implementation task, with local checks.
+max_steps: 1
+initial_step: implement
+steps:
+  - name: implement
+    session_key: sol-worker
+    capabilities: edit
+    edit: true
+    persona: |
+      You are Sol, the implementation worker. Work only within the approved file scope.
+      Do not launch subagents, delegate, push, read credentials, or change workflow configuration.
+      Preserve other tasks and report blockers with evidence.
+    instruction: |
+      Implement the approved task in this work copy. Run the approved local checks.
+      Keep changes minimal and report files changed, check results and remaining blockers.
+      Report failure if a required check fails. Do not change the approval contract.
+    rules:
+      - condition: Approved implementation and required local checks succeeded
+        next: COMPLETE
+      - condition: Blocked or required checks failed
+        next: ABORT

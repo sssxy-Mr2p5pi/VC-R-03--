@@ -1,0 +1,19 @@
+provider: codex
+model: gpt-6.1-sol
+concurrency: 2
+auto_requeue_max_attempts: 0
+ignore_exceed: false
+auto_pr: false
+sync_project_local_takt_on_retry: false
+provider_options:
+  codex:
+    reasoning_effort: high
+    network_access: false
+    skills:
+      repo: false
+      user: false
+    guards:
+      call_timeout_ms: 3600000
+provider_profiles:
+  codex:
+    default_permission_mode: edit

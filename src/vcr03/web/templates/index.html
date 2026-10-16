@@ -1,6 +1,7 @@
 {% extends 'base.html' %}{% block body %}
 <h1>{{ '官方全量数据' if selected == 'full' else '固定 10,000 行性能样本' }}</h1>
-<p class="muted">当前提供导入、清洗与质量核验。配对、工单及审批尚待后续模块完成。</p>
+<p class="muted">先核验来源，再运行配对与初始异常建单。当前工单提供查询，人工处理入口后续开放。</p>
+<section class="panel"><form method="post" action="/reconcile"><input type="hidden" name="source" value="{{ selected }}"><input type="hidden" name="csrf" value="{{ csrf }}"><button type="submit">运行对账并生成初始异常单</button></form><p class="muted">按项目规则自动配对；同一输入重复执行保留已有结果和有效额度。</p></section>
 <section class="panel"><form method="post" action="/import"><input type="hidden" name="source" value="{{ selected }}"><input type="hidden" name="csrf" value="{{ csrf }}"><button type="submit">导入并核验固定文件</button></form>
 <p class="muted">全量首次导入需要等待；同源同规则再次导入复用已有结果。两个入口使用独立数据库。</p></section>
 {% if summary %}

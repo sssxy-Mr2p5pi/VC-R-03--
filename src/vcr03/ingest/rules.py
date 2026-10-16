@@ -11,7 +11,7 @@ import unicodedata
 HEADERS = ('Invoice', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'Price', 'Customer ID', 'Country')
 NORM_VERSION = 'nfkc-trim-uppercase-u15-v1'
 READ_VERSION = 'openpyxl-3.1.5-decimal-str-v1'
-INGEST_VERSION = 'module-a-v1'
+INGEST_VERSION = 'module-a-v2-searchable-conflicts'
 TRIM = ''.join(chr(n) for a, b in [(9, 13), (28, 32), (133, 133), (160, 160), (5760, 5760),
                                  (8192, 8202), (8232, 8233), (8239, 8239), (8287, 8287), (12288, 12288)]
                for n in range(a, b + 1))

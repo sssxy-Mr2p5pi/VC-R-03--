@@ -200,7 +200,7 @@ def ingest_workbook(source: Path, database: Path, *, dictionary_path=None, progr
             conflict = conflicts.get(row['keys']['Invoice'])
             if conflict:
                 row['issues'].append({'field': 'Invoice', 'code': conflict})
-                row['candidate_comparable'] = 0
+                # D-38: version conflict blocks allocation, not candidate discovery.
                 row['reason_category'] = ('NONPRODUCT_DATA_QUALITY' if row['line_kind'] == 'NONPRODUCT' else 'DATA_QUALITY')
                 row['primary_reason'] = row['primary_reason'] or conflict
             updates.append((row['side'], row['line_kind'], row['quantity'], row['price'], row['invoice_date'],

@@ -48,7 +48,7 @@ def test_tc10_country_difference_keeps_both_versions(workbook,tmp_path):
     result=ingest_workbook(source,db)
     assert result['summary']['excluded_rows']==0
     assert result['summary']['invoice_version_conflicts']==['100']
-    assert all(r['candidate_comparable']==0 for r in stored(db))
+    assert all(r['candidate_comparable']==1 for r in stored(db))  # D-38: conflicts remain visible.
 
 
 def test_tc12_precise_nonproduct_codes_and_positive_cancel(workbook,tmp_path):
@@ -229,7 +229,7 @@ def test_tc10_boolean_cannot_be_hidden_by_numeric_duplicate(workbook,tmp_path,ea
     assert result['summary']['retained_rows']==2
     assert result['summary']['invoice_type_conflicts']==['100']
     rows=stored(db)
-    assert all(r['candidate_comparable']==0 for r in rows)
+    assert sum(r['candidate_comparable'] for r in rows)==1  # Only the valid numeric quantity is searchable.
     damaged=rows[0 if earlier is True else 1]
     assert damaged['quantity'] is None
     assert any(i['code']=='NUMERIC_TYPE_INVALID' for i in json.loads(damaged['quality_tags']))

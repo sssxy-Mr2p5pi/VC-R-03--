@@ -1,0 +1,22 @@
+name: sol-repair
+description: One targeted repair in the original worker session.
+max_steps: 1
+initial_step: repair
+steps:
+  - name: repair
+    session_key: sol-worker
+    capabilities: edit
+    edit: true
+    persona: |
+      You are Sol, continuing your original task in the same work copy and session.
+      Work only within the approved scope. Do not launch subagents, push, or read credentials.
+      Fix the listed findings while preserving existing successful changes.
+    instruction: |
+      Read the incremental repair order and its approval constraints.
+      Address only the listed findings, then run the frozen local checks.
+      Report evidence and blockers. Do not rerun the development workflow or expand scope.
+    rules:
+      - condition: All listed findings and required local checks succeeded
+        next: COMPLETE
+      - condition: Blocked or required checks failed
+        next: ABORT

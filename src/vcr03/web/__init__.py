@@ -99,4 +99,6 @@ def create_app(config=None):
                                reasons=json.loads(row['quality_tags']), headers=service.HEADERS,
                                source_hash=json.loads(snapshot['summary_json'])['source_sha256'])
 
+    from vcr03.web.matching import register
+    register(app)
     return app

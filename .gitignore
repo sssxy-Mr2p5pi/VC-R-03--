@@ -18,3 +18,10 @@ data/processed/*
 每日工作记录/*/提交记录.txt
 *.bundle
 *.part
+
+# Local TAKT receipts, copies and runtime state
+.local/
+.takt/*
+!.takt/config.yaml
+!.takt/workflows/
+!.takt/workflows/**

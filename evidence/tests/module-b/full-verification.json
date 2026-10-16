@@ -1,0 +1,4312 @@
+{
+  "verified_at": "2026-10-15T14:38:15+08:00",
+  "scope": "Both official sheets; active D-38 A/B; source and historical evidence retained",
+  "before": {
+    "full": {
+      "source_rows": 1067371,
+      "snapshots": [
+        "b1bb1d4da547783c0b17c6948d5c13fcd55d0a3f55a4b9a34fd04886e9e64b0e",
+        "bdc90aabfe4e1cf3a77ea8d37a6c86a6712e335ad7848cbd165fc55887986325"
+      ],
+      "active": "b1bb1d4da547783c0b17c6948d5c13fcd55d0a3f55a4b9a34fd04886e9e64b0e"
+    },
+    "performance": {
+      "source_rows": 10000,
+      "snapshots": [
+        "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1"
+      ],
+      "active": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1"
+    }
+  },
+  "refresh": {
+    "full": {
+      "dataset_id": "99ea58f2743577308821bb3e6beb5ca1871df7b16dadcf3df4213fa41d7b3d47",
+      "snapshot_id": "3f56dd787d68f04e16957697450af9c2be0fad98fe7195dad478c1044731dd3d",
+      "reused": false,
+      "elapsed_seconds": 133.50685160000103,
+      "summary": {
+        "raw_rows": 1067371,
+        "retained_rows": 1041455,
+        "excluded_rows": 25916,
+        "r1_valid": true,
+        "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+        "source_unchanged": true,
+        "side_counts": {
+          "CANCEL": 19165,
+          "SALE": 1022290
+        },
+        "exclusion_primary_counts": {
+          "CROSS_SHEET_DUPLICATE": 22523,
+          "NON_C_NEGATIVE_QUANTITY": 3393
+        },
+        "exclusion_union": {
+          "duplicate": 22523,
+          "negative": 3457,
+          "overlap": 64
+        },
+        "quality_rows": 229795,
+        "nonproduct_rows": 5830,
+        "nonproduct": [
+          {
+            "code": "ADJUST",
+            "name": "ADJUST",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 67,
+            "sale": 36,
+            "cancel": 31,
+            "amount": "6835.24",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "ADJUST2",
+            "name": "ADJUST2",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 3,
+            "sale": 3,
+            "cancel": 0,
+            "amount": "731.05",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "AMAZONFEE",
+            "name": "AMAZONFEE",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 36,
+            "sale": 3,
+            "cancel": 33,
+            "amount": "-221520.50",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "B",
+            "name": "坏账调整单",
+            "category": "其他已识别非商品",
+            "count": 6,
+            "sale": 6,
+            "cancel": 0,
+            "amount": "-147614.08",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "BANK CHARGES",
+            "name": "手续费",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 100,
+            "sale": 34,
+            "cancel": 66,
+            "amount": "-35482.249",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "C2",
+            "name": "运费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 277,
+            "sale": 270,
+            "cancel": 7,
+            "amount": "13136",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "CRUK",
+            "name": "CRUK",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 16,
+            "sale": 0,
+            "cancel": 16,
+            "amount": "-7933.43",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "D",
+            "name": "折扣",
+            "category": "优惠抵扣",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 173,
+            "sale": 5,
+            "cancel": 168,
+            "amount": "-12879.63",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "DOT",
+            "name": "网站邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1425,
+            "sale": 1422,
+            "cancel": 3,
+            "amount": "309844.10",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_10",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 16,
+            "sale": 16,
+            "cancel": 0,
+            "amount": "126.21",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_20",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 29,
+            "sale": 29,
+            "cancel": 0,
+            "amount": "471.06",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_30",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 29,
+            "sale": 29,
+            "cancel": 0,
+            "amount": "610.09",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_40",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 7,
+            "sale": 7,
+            "cancel": 0,
+            "amount": "166.09",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_50",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 8,
+            "sale": 8,
+            "cancel": 0,
+            "amount": "253.59",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_60",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 2,
+            "cancel": 0,
+            "amount": "0",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_70",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 3,
+            "sale": 3,
+            "cancel": 0,
+            "amount": "59.57",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_80",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "sale": 3,
+            "cancel": 1,
+            "amount": "0.00",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_90",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 2,
+            "cancel": 0,
+            "amount": "0",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "M",
+            "name": "人工录入",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1403,
+            "sale": 868,
+            "cancel": 535,
+            "amount": "-82935.57",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "PADS",
+            "name": "PADS",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 19,
+            "sale": 18,
+            "cancel": 1,
+            "amount": "-36.583",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "POST",
+            "name": "邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2086,
+            "sale": 1858,
+            "cancel": 228,
+            "amount": "110430.41",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "S",
+            "name": "样品",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 102,
+            "sale": 3,
+            "cancel": 99,
+            "amount": "-6000.85",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "TEST001",
+            "pattern": "TEST\\d+",
+            "name": "TEST编码",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目完整模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 15,
+            "sale": 11,
+            "cancel": 4,
+            "amount": "202.5",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "TEST002",
+            "pattern": "TEST\\d+",
+            "name": "TEST编码",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目完整模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 2,
+            "cancel": 0,
+            "amount": "1",
+            "invalid_amount_rows": 0
+          }
+        ],
+        "key_merge_groups": 174,
+        "suspicious_key_groups": 0,
+        "invoice_version_conflicts": [],
+        "invoice_type_conflicts": [],
+        "dictionary_version": "nonproduct-v1",
+        "dictionary_hash": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+        "normalization_version": "nfkc-trim-uppercase-u15-v1",
+        "read_version": "openpyxl-3.1.5-decimal-str-v1",
+        "scope": "module A import and quality only; no matching, ticket, allocation or NFR acceptance",
+        "approved_refresh": {
+          "previous_snapshot_id": "b1bb1d4da547783c0b17c6948d5c13fcd55d0a3f55a4b9a34fd04886e9e64b0e",
+          "changed_output_rows": 0,
+          "compared_rows": 1067371,
+          "old_source_and_analysis_preserved": true
+        }
+      }
+    },
+    "performance": {
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "e8402751fc97c3cdeac9cafbb6fd0566301132e9068adbc967cc8b8b4a47a071",
+      "reused": false,
+      "elapsed_seconds": 1.2275150999994366,
+      "summary": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "r1_valid": true,
+        "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+        "source_unchanged": true,
+        "side_counts": {
+          "CANCEL": 260,
+          "SALE": 9679
+        },
+        "exclusion_primary_counts": {
+          "NON_C_NEGATIVE_QUANTITY": 61
+        },
+        "exclusion_union": {
+          "duplicate": 0,
+          "negative": 61,
+          "overlap": 0
+        },
+        "quality_rows": 2067,
+        "nonproduct_rows": 89,
+        "nonproduct": [
+          {
+            "code": "AMAZONFEE",
+            "name": "AMAZONFEE",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 1,
+            "cancel": 1,
+            "amount": "0.00",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "BANK CHARGES",
+            "name": "手续费",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1,
+            "sale": 0,
+            "cancel": 1,
+            "amount": "-39.24",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "C2",
+            "name": "运费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "sale": 4,
+            "cancel": 0,
+            "amount": "200",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "D",
+            "name": "折扣",
+            "category": "优惠抵扣",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1,
+            "sale": 0,
+            "cancel": 1,
+            "amount": "-162.24",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "DOT",
+            "name": "网站邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 15,
+            "sale": 15,
+            "cancel": 0,
+            "amount": "2711.38",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "M",
+            "name": "人工录入",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 35,
+            "sale": 19,
+            "cancel": 16,
+            "amount": "-2718.99",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "POST",
+            "name": "邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 27,
+            "sale": 19,
+            "cancel": 8,
+            "amount": "1496.10",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "S",
+            "name": "样品",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "sale": 0,
+            "cancel": 4,
+            "amount": "-1129.33",
+            "invalid_amount_rows": 0
+          }
+        ],
+        "key_merge_groups": 18,
+        "suspicious_key_groups": 0,
+        "invoice_version_conflicts": [],
+        "invoice_type_conflicts": [],
+        "dictionary_version": "nonproduct-v1",
+        "dictionary_hash": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+        "normalization_version": "nfkc-trim-uppercase-u15-v1",
+        "read_version": "openpyxl-3.1.5-decimal-str-v1",
+        "scope": "module A import and quality only; no matching, ticket, allocation or NFR acceptance",
+        "approved_refresh": {
+          "previous_snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1",
+          "changed_output_rows": 0,
+          "compared_rows": 10000,
+          "old_source_and_analysis_preserved": true
+        }
+      }
+    }
+  },
+  "full": {
+    "import": {
+      "dataset_id": "99ea58f2743577308821bb3e6beb5ca1871df7b16dadcf3df4213fa41d7b3d47",
+      "snapshot_id": "3f56dd787d68f04e16957697450af9c2be0fad98fe7195dad478c1044731dd3d",
+      "reused": true,
+      "elapsed_seconds": 0.10842299999967508,
+      "summary": {
+        "raw_rows": 1067371,
+        "retained_rows": 1041455,
+        "excluded_rows": 25916,
+        "r1_valid": true,
+        "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+        "source_unchanged": true,
+        "side_counts": {
+          "CANCEL": 19165,
+          "SALE": 1022290
+        },
+        "exclusion_primary_counts": {
+          "CROSS_SHEET_DUPLICATE": 22523,
+          "NON_C_NEGATIVE_QUANTITY": 3393
+        },
+        "exclusion_union": {
+          "duplicate": 22523,
+          "negative": 3457,
+          "overlap": 64
+        },
+        "quality_rows": 229795,
+        "nonproduct_rows": 5830,
+        "nonproduct": [
+          {
+            "code": "ADJUST",
+            "name": "ADJUST",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 67,
+            "sale": 36,
+            "cancel": 31,
+            "amount": "6835.24",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "ADJUST2",
+            "name": "ADJUST2",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 3,
+            "sale": 3,
+            "cancel": 0,
+            "amount": "731.05",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "AMAZONFEE",
+            "name": "AMAZONFEE",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 36,
+            "sale": 3,
+            "cancel": 33,
+            "amount": "-221520.50",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "B",
+            "name": "坏账调整单",
+            "category": "其他已识别非商品",
+            "count": 6,
+            "sale": 6,
+            "cancel": 0,
+            "amount": "-147614.08",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "BANK CHARGES",
+            "name": "手续费",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 100,
+            "sale": 34,
+            "cancel": 66,
+            "amount": "-35482.249",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "C2",
+            "name": "运费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 277,
+            "sale": 270,
+            "cancel": 7,
+            "amount": "13136",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "CRUK",
+            "name": "CRUK",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 16,
+            "sale": 0,
+            "cancel": 16,
+            "amount": "-7933.43",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "D",
+            "name": "折扣",
+            "category": "优惠抵扣",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 173,
+            "sale": 5,
+            "cancel": 168,
+            "amount": "-12879.63",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "DOT",
+            "name": "网站邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1425,
+            "sale": 1422,
+            "cancel": 3,
+            "amount": "309844.10",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_10",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 16,
+            "sale": 16,
+            "cancel": 0,
+            "amount": "126.21",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_20",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 29,
+            "sale": 29,
+            "cancel": 0,
+            "amount": "471.06",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_30",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 29,
+            "sale": 29,
+            "cancel": 0,
+            "amount": "610.09",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_40",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 7,
+            "sale": 7,
+            "cancel": 0,
+            "amount": "166.09",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_50",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 8,
+            "sale": 8,
+            "cancel": 0,
+            "amount": "253.59",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_60",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 2,
+            "cancel": 0,
+            "amount": "0",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_70",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 3,
+            "sale": 3,
+            "cancel": 0,
+            "amount": "59.57",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_80",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "sale": 3,
+            "cancel": 1,
+            "amount": "0.00",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "GIFT_0001_90",
+            "pattern": "GIFT_\\d+_\\d+",
+            "name": "礼品券",
+            "category": "其他已识别非商品",
+            "source": "课程gift编码及DP-06精确模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 2,
+            "cancel": 0,
+            "amount": "0",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "M",
+            "name": "人工录入",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1403,
+            "sale": 868,
+            "cancel": 535,
+            "amount": "-82935.57",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "PADS",
+            "name": "PADS",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目扩充；evidence/data/review-2026-10-14/rule_input_audit.json",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 19,
+            "sale": 18,
+            "cancel": 1,
+            "amount": "-36.583",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "POST",
+            "name": "邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2086,
+            "sale": 1858,
+            "cancel": 228,
+            "amount": "110430.41",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "S",
+            "name": "样品",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 102,
+            "sale": 3,
+            "cancel": 99,
+            "amount": "-6000.85",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "TEST001",
+            "pattern": "TEST\\d+",
+            "name": "TEST编码",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目完整模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 15,
+            "sale": 11,
+            "cancel": 4,
+            "amount": "202.5",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "TEST002",
+            "pattern": "TEST\\d+",
+            "name": "TEST编码",
+            "category": "其他已识别非商品",
+            "source": "DP-06项目完整模式",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 2,
+            "cancel": 0,
+            "amount": "1",
+            "invalid_amount_rows": 0
+          }
+        ],
+        "key_merge_groups": 174,
+        "suspicious_key_groups": 0,
+        "invoice_version_conflicts": [],
+        "invoice_type_conflicts": [],
+        "dictionary_version": "nonproduct-v1",
+        "dictionary_hash": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+        "normalization_version": "nfkc-trim-uppercase-u15-v1",
+        "read_version": "openpyxl-3.1.5-decimal-str-v1",
+        "scope": "module A import and quality only; no matching, ticket, allocation or NFR acceptance",
+        "approved_refresh": {
+          "previous_snapshot_id": "b1bb1d4da547783c0b17c6948d5c13fcd55d0a3f55a4b9a34fd04886e9e64b0e",
+          "changed_output_rows": 0,
+          "compared_rows": 1067371,
+          "old_source_and_analysis_preserved": true
+        }
+      }
+    },
+    "matching": {
+      "match_id": "9e412560abc40241e80ee4a5d2388bbbc2dacf60bbbd73c3761d3068d8919315",
+      "dataset_id": "99ea58f2743577308821bb3e6beb5ca1871df7b16dadcf3df4213fa41d7b3d47",
+      "snapshot_id": "3f56dd787d68f04e16957697450af9c2be0fad98fe7195dad478c1044731dd3d",
+      "rule_version": "matching-d38-v1",
+      "status": "ACTIVE",
+      "reused": false,
+      "summary": {
+        "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+        "row_classes": {
+          "NO_ORIGINAL": 1864,
+          "MATCHED_AUTO": 8495,
+          "SUSPECTED": 7614
+        },
+        "invoice_classes": {
+          "NO_ORIGINAL": 906,
+          "NONPRODUCT_ONLY": 887,
+          "SUSPECTED": 3564,
+          "MATCHED_AUTO": 2935
+        },
+        "primary_reasons": {
+          "ONLY_LATER_SALES": 496,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 1036,
+          "MATCHED_AUTO": 8495,
+          "MULTIPLE_CANDIDATES": 7045,
+          "MISSING_CUSTOMER": 332,
+          "CUMULATIVE_OVER_QUOTA": 144,
+          "PRICE_DIFFERENCE": 365,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 60
+        },
+        "reason_tags_nonexclusive": {
+          "ONLY_LATER_SALES": 496,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 1036,
+          "MULTIPLE_CANDIDATES": 7045,
+          "KEY_MISSING": 332,
+          "COMBINATION_POSSIBLE_NOT_PROVEN": 114,
+          "CUMULATIVE_OVER_QUOTA": 227,
+          "PRICE_DIFFERENCE": 365,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 71,
+          "PRICE_INVALID_OR_NONPOSITIVE": 21
+        },
+        "commodity_cancellations": 17973,
+        "candidate_links": 44160,
+        "unique_candidate_rows": 9064,
+        "over_quota_originals": 140,
+        "ticket_count": 4470,
+        "ticket_types": {
+          "MATCHING_DISCREPANCY": 4326,
+          "DATA_QUALITY": 123,
+          "MIXED": 21
+        },
+        "ticket_commodity_lines": 12909,
+        "automatic_invoice_commodity_lines": 5064,
+        "source_quality_rows": 229795,
+        "cancellations_affected_by_candidate_quality": 21,
+        "own_cancellation_quality_rows": 332,
+        "amount_incomplete_invoices": 0,
+        "balances": [
+          {
+            "name": "file_rows",
+            "left": 1067371,
+            "right": 1067371,
+            "valid": true
+          },
+          {
+            "name": "retained_sides",
+            "left": 1041455,
+            "right": 1041455,
+            "valid": true
+          },
+          {
+            "name": "cancellation_rows",
+            "left": 19165,
+            "right": 19165,
+            "valid": true
+          },
+          {
+            "name": "commodity_classes",
+            "left": 17973,
+            "right": 17973,
+            "valid": true
+          },
+          {
+            "name": "invoice_scope",
+            "left": 8292,
+            "right": 8292,
+            "valid": true
+          },
+          {
+            "name": "commodity_invoice_classes",
+            "left": 7405,
+            "right": 7405,
+            "valid": true
+          },
+          {
+            "name": "invoice_partition",
+            "left": 8292,
+            "right": 8292,
+            "valid": true
+          },
+          {
+            "name": "commodity_details",
+            "left": 17973,
+            "right": 17973,
+            "valid": true
+          },
+          {
+            "name": "nonproduct_sources",
+            "left": 1192,
+            "right": 1192,
+            "valid": true
+          },
+          {
+            "name": "exclusive_reasons",
+            "left": 17973,
+            "right": 17973,
+            "valid": true
+          }
+        ]
+      },
+      "elapsed_seconds": 7.881859099999929
+    },
+    "elapsed_seconds": 8.072700500000792
+  },
+  "sample": {
+    "import": {
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "e8402751fc97c3cdeac9cafbb6fd0566301132e9068adbc967cc8b8b4a47a071",
+      "reused": true,
+      "elapsed_seconds": 0.012395600000672857,
+      "summary": {
+        "raw_rows": 10000,
+        "retained_rows": 9939,
+        "excluded_rows": 61,
+        "r1_valid": true,
+        "source_sha256": "4bdd5a7e891e6086ab0b08d7d6692c3abd56e6b3ad4158da4ae137aa8c2460f9",
+        "source_unchanged": true,
+        "side_counts": {
+          "CANCEL": 260,
+          "SALE": 9679
+        },
+        "exclusion_primary_counts": {
+          "NON_C_NEGATIVE_QUANTITY": 61
+        },
+        "exclusion_union": {
+          "duplicate": 0,
+          "negative": 61,
+          "overlap": 0
+        },
+        "quality_rows": 2067,
+        "nonproduct_rows": 89,
+        "nonproduct": [
+          {
+            "code": "AMAZONFEE",
+            "name": "AMAZONFEE",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 2,
+            "sale": 1,
+            "cancel": 1,
+            "amount": "0.00",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "BANK CHARGES",
+            "name": "手续费",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1,
+            "sale": 0,
+            "cancel": 1,
+            "amount": "-39.24",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "C2",
+            "name": "运费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "sale": 4,
+            "cancel": 0,
+            "amount": "200",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "D",
+            "name": "折扣",
+            "category": "优惠抵扣",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 1,
+            "sale": 0,
+            "cancel": 1,
+            "amount": "-162.24",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "DOT",
+            "name": "网站邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 15,
+            "sale": 15,
+            "cancel": 0,
+            "amount": "2711.38",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "M",
+            "name": "人工录入",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 35,
+            "sale": 19,
+            "cancel": 16,
+            "amount": "-2718.99",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "POST",
+            "name": "邮费",
+            "category": "运费",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 27,
+            "sale": 19,
+            "cancel": 8,
+            "amount": "1496.10",
+            "invalid_amount_rows": 0
+          },
+          {
+            "code": "S",
+            "name": "样品",
+            "category": "其他已识别非商品",
+            "source": "课程题面口径说明非商品段及DP-06",
+            "maintainer": "项目学生",
+            "confirmed_on": "2026-10-14",
+            "count": 4,
+            "sale": 0,
+            "cancel": 4,
+            "amount": "-1129.33",
+            "invalid_amount_rows": 0
+          }
+        ],
+        "key_merge_groups": 18,
+        "suspicious_key_groups": 0,
+        "invoice_version_conflicts": [],
+        "invoice_type_conflicts": [],
+        "dictionary_version": "nonproduct-v1",
+        "dictionary_hash": "b7c8a53c6b8c1fff474110ed549317d46a6a471ceb75b0c1f52ee9db866ce3f4",
+        "normalization_version": "nfkc-trim-uppercase-u15-v1",
+        "read_version": "openpyxl-3.1.5-decimal-str-v1",
+        "scope": "module A import and quality only; no matching, ticket, allocation or NFR acceptance",
+        "approved_refresh": {
+          "previous_snapshot_id": "c9488d4aed2c3394d912ae8f3e09220692de65fe247de8f6d48c35a1dcb621d1",
+          "changed_output_rows": 0,
+          "compared_rows": 10000,
+          "old_source_and_analysis_preserved": true
+        }
+      }
+    },
+    "matching": {
+      "match_id": "4c51aff97bb855e7a1b4fc252d3c919252a3b92c638a65a2d51b79e66b063df8",
+      "dataset_id": "e57dbca48171479a568f3f1d7d506cecf4133c3362af03508a50211974ac27c9",
+      "snapshot_id": "e8402751fc97c3cdeac9cafbb6fd0566301132e9068adbc967cc8b8b4a47a071",
+      "rule_version": "matching-d38-v1",
+      "status": "ACTIVE",
+      "reused": false,
+      "summary": {
+        "scope": "initial matching; counts are source lines or invoices, not review conclusions",
+        "row_classes": {
+          "SUSPECTED": 13,
+          "NO_ORIGINAL": 183,
+          "MATCHED_AUTO": 33
+        },
+        "invoice_classes": {
+          "NO_ORIGINAL": 89,
+          "NONPRODUCT_ONLY": 21,
+          "MATCHED_AUTO": 8,
+          "SUSPECTED": 3
+        },
+        "primary_reasons": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "MATCHED_AUTO": 33,
+          "ONLY_LATER_SALES": 9,
+          "MISSING_CUSTOMER": 2,
+          "MULTIPLE_CANDIDATES": 5
+        },
+        "reason_tags_nonexclusive": {
+          "PRICE_DIFFERENCE": 8,
+          "NO_SAME_CUSTOMER_STOCK_IN_DATASET": 172,
+          "ONLY_LATER_SALES": 9,
+          "KEY_MISSING": 2,
+          "MULTIPLE_CANDIDATES": 5,
+          "COMBINATION_POSSIBLE_NOT_PROVEN": 1,
+          "SINGLE_RETURN_EXCEEDS_ORIGINAL": 1,
+          "CUMULATIVE_OVER_QUOTA": 1
+        },
+        "commodity_cancellations": 229,
+        "candidate_links": 51,
+        "unique_candidate_rows": 41,
+        "over_quota_originals": 1,
+        "ticket_count": 92,
+        "ticket_types": {
+          "MATCHING_DISCREPANCY": 91,
+          "DATA_QUALITY": 1
+        },
+        "ticket_commodity_lines": 207,
+        "automatic_invoice_commodity_lines": 22,
+        "source_quality_rows": 2067,
+        "cancellations_affected_by_candidate_quality": 0,
+        "own_cancellation_quality_rows": 2,
+        "amount_incomplete_invoices": 0,
+        "balances": [
+          {
+            "name": "file_rows",
+            "left": 10000,
+            "right": 10000,
+            "valid": true
+          },
+          {
+            "name": "retained_sides",
+            "left": 9939,
+            "right": 9939,
+            "valid": true
+          },
+          {
+            "name": "cancellation_rows",
+            "left": 260,
+            "right": 260,
+            "valid": true
+          },
+          {
+            "name": "commodity_classes",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "invoice_scope",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_invoice_classes",
+            "left": 100,
+            "right": 100,
+            "valid": true
+          },
+          {
+            "name": "invoice_partition",
+            "left": 121,
+            "right": 121,
+            "valid": true
+          },
+          {
+            "name": "commodity_details",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          },
+          {
+            "name": "nonproduct_sources",
+            "left": 31,
+            "right": 31,
+            "valid": true
+          },
+          {
+            "name": "exclusive_reasons",
+            "left": 229,
+            "right": 229,
+            "valid": true
+          }
+        ]
+      },
+      "elapsed_seconds": 0.05484220000107598
+    },
+    "elapsed_seconds": 0.07945629999994708
+  },
+  "full_pipeline_wall_seconds": 8.072707700001047,
+  "compared_commodity_rows": 17973,
+  "business_differences": [],
+  "historical_zero_to_not_computed": [
+    {
+      "source": [
+        "Year 2009-2010",
+        5900
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        6378
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        6379
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        29417
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        38347
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        40028
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        42636
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        43499
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        43500
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        43501
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        45714
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        46013
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        46014
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        46015
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        46016
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        47139
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        47140
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        51421
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        60906
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        64236
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        72046
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        73141
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        73142
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        73545
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        75211
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        75212
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        75214
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        80947
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        81001
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        82990
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84986
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84987
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84988
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84989
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84990
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84991
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84992
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84993
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84994
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84995
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84996
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84997
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84998
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        84999
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85000
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85001
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85002
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85003
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85004
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85005
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85006
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85007
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85008
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85009
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85010
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85011
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85012
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        85013
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        89089
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        94558
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        122668
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        129520
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        133210
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        133211
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        142208
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        145641
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        147094
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        152637
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        152638
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        165603
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        165683
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        168098
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        179432
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        186235
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        186775
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        186776
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        202160
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        205349
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        208260
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        208261
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        208262
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        215003
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        215004
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        215005
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        215289
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        215377
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        215378
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        218267
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        218326
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        220975
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        230294
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        230295
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        230296
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        230297
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        232829
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        240567
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        240855
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        240856
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        240857
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        240858
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        240859
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        240860
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        241747
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        241748
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        261577
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        261578
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        265038
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        265039
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        265040
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        274688
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        281266
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        285854
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        291857
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        291858
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        292443
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        292452
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        292761
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        303397
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        306667
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        307336
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        307337
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        319899
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        321987
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326688
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326689
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326690
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326691
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326692
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326693
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326694
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326695
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326696
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        326697
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        343630
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        361752
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        379728
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        379729
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        379730
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        379731
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        379732
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        379733
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        379734
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        386466
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        386467
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        386468
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        386469
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        386470
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        388468
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        393121
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        398586
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        401251
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        401252
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        401253
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        401254
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        401926
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        420043
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        435078
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        440221
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        440222
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        445649
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        452159
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        456661
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        477698
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        485633
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        485634
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        487178
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2009-2010",
+        501809
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11504
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11505
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11506
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11507
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11508
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11509
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11510
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11511
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11512
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11513
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11514
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11515
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11516
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11517
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11518
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11519
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11520
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11521
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11522
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        11523
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        29021
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        41189
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        41622
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        44154
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        50809
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        54082
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61955
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61956
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61957
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61958
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61959
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61960
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61961
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        61962
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        75007
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        78236
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        82040
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        82041
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        84374
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        108128
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        121370
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        125069
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        126628
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        126629
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        126630
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133110
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133111
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133112
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133113
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133114
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133115
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133116
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133117
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133118
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133119
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133120
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133121
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133122
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133123
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133124
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133125
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133126
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133127
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133128
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133129
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133130
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133131
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133132
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133133
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133134
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133135
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        133136
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        142355
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        196507
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        196508
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        196509
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        196809
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        205200
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        205201
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235923
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235924
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235925
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235926
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235927
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235928
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235929
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235930
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235931
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235932
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235933
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235934
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235935
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235936
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235937
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235938
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235939
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235940
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235941
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235942
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235943
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235944
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235945
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235946
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235947
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235948
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235949
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235950
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235951
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235952
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235953
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235954
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235955
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235956
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235957
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235958
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235959
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235960
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        235961
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        242609
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        263221
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        279133
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        279134
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        279135
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        285962
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        286345
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        293785
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        349691
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        349692
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        376128
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397656
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397657
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397658
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397659
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397660
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397661
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397662
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397663
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397664
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397665
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397666
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397667
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397668
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397669
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397670
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397671
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397672
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397673
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397674
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397675
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        397676
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        424044
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        437385
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        450081
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        487789
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        487790
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        487791
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        492203
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        492204
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        492205
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        492206
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        492207
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        492208
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        492209
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        514986
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    },
+    {
+      "source": [
+        "Year 2010-2011",
+        516456
+      ],
+      "old_count": 0,
+      "current_count": null,
+      "reason": "MISSING_CUSTOMER"
+    }
+  ],
+  "evidence_semantics": "DP-10 requires uncomputed candidate counts to be null; historical dry run used zero for missing customer.",
+  "old_A_output_changes": {
+    "b1bb1d4da547783c0b17c6948d5c13fcd55d0a3f55a4b9a34fd04886e9e64b0e": 0,
+    "bdc90aabfe4e1cf3a77ea8d37a6c86a6712e335ad7848cbd165fc55887986325": 0
+  },
+  "actual_table_counts": {
+    "source_line": 1067371,
+    "analysis_snapshot": 3,
+    "match_result": 17973,
+    "candidate": 44160,
+    "ticket": 4470,
+    "ticket_line": 12909,
+    "processing_round": 4470,
+    "allocation": 8495,
+    "ledger_entry": 8495
+  },
+  "overallocated_originals": 0,
+  "foreign_key_errors": [],
+  "source_sha256_after": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "persisted_query_match_id": "9e412560abc40241e80ee4a5d2388bbbc2dacf60bbbd73c3761d3068d8919315"
+}

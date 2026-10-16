@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block body %}<h1>处理指标 · {{ selected }}</h1>
+{% set names = {'reversed_auto_allocations':'被冲销的自动配对','reviews_pass':'复核通过','reviews_fail':'复核否决（已触发冲销）','unreviewed_submitted':'已提交未复核','oldest_wait_seconds':'最长等待（秒）','average_review_wait_seconds':'平均等待（秒）'} %}
+<section class="panel"><div class="cards">{% for k, v in metrics.items() %}<div class="card"><div class="muted">{{ names.get(k, k) }}</div><div class="value">{{ v }}</div></div>{% endfor %}</div></section>
+<p class="muted">口径以规格 FR-19 为准；未产生数据的指标显示 0 或空。教学演示页，不构成性能验收。</p>
+<p><a href="/tickets?source={{ selected }}">返回工单列表</a></p>
+{% endblock %}

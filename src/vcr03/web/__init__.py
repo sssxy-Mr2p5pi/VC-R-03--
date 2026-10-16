@@ -101,4 +101,6 @@ def create_app(config=None):
 
     from vcr03.web.matching import register
     register(app)
+    from vcr03.web.workflow import register as register_workflow
+    register_workflow(app)
     return app
